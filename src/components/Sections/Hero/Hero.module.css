@@ -1,0 +1,444 @@
+.heroSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 760px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: var(--softBg);
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 0;
+  justify-content: center;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+#circle1 {
+  width: 40rem;
+  height: 20rem;
+  border-radius: 9999px;
+  animation: one 10s infinite;
+  opacity: 0.9;
+  filter: blur(9rem);
+  background-color: var(--circle1Color);
+  right: 140px;
+}
+
+@keyframes one {
+  0% {
+    right: 0rem;
+    top: 0rem;
+  }
+  25% {
+    right: 0rem;
+    top: 7rem;
+  }
+  50% {
+    right: 2rem;
+    top: 15rem;
+  }
+  75% {
+    right: 5rem;
+    top: 10rem;
+  }
+  100% {
+    right: 0rem;
+    top: 0rem;
+  }
+}
+
+#circle2 {
+  width: 40rem;
+  height: 20rem;
+  border-radius: 9999px;
+  opacity: 0.5;
+  filter: blur(8rem);
+  background-color: var(--circle2Color);
+  animation: two 10s infinite;
+  top: 390px;
+  right: 140px;
+}
+
+@keyframes two {
+  0% {
+    left: 0rem;
+    top: 0rem;
+  }
+  25% {
+    left: 2rem;
+    top: 1rem;
+  }
+  50% {
+    left: 3.2rem;
+    top: 5rem;
+  }
+  75% {
+    left: 4rem;
+    top: 10rem;
+  }
+  100% {
+    left: 0rem;
+    top: 0rem;
+  }
+}
+
+#circle3 {
+  width: 40rem;
+  height: 10rem;
+  border-radius: 9999px;
+  opacity: 0.5;
+  filter: blur(8rem);
+  background-color: var(--circle3Color);
+  top: 410px;
+  right: 400px;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  top: 180px;
+  right: 200px;
+}
+
+.content h1 {
+  font-size: 64px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.content p {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.paragraphContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.paragraphContainer span {
+  border: 2px solid #00a4d8;
+  height: 60px;
+}
+
+.paragraphContainer p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  width: 52%;
+  padding-left: 15px;
+}
+
+.buttonInfoContainer {
+  position: relative;
+  display: flex;
+  align-items: start;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.goApp {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--softTextColor);
+  color: var(--softBg);
+  border: none;
+  cursor: pointer;
+  width: 205px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 22px;
+  transition: transform 0.1s ease, background-color 0.3s ease;
+}
+
+.goApp:hover {
+  background-image: linear-gradient(to right, #ff17be, #1f1bef, #0aefd4);
+  color: var(--softTextColor);
+  transform: scale(1.05);
+  transition: transform 0.9s ease, background-color 0.3s ease;
+}
+
+.goApp:active {
+  transform: scale(1.1);
+}
+
+.infoBox {
+  padding: 10px;
+  width: 555px;
+  position: absolute;
+  color: var(--softTextColor);
+  left: 630px;
+  top: -100px;
+}
+
+.cryptoTable {
+  background-color: #83838383;
+  width: 100%;
+  border: 1px solid var(--softTextColor);
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+.cryptoTable th,
+.cryptoTable td {
+  padding: 10px;
+  text-align: left;
+}
+
+.cryptoTable th {
+  border-bottom: 1px solid var(--softTextColor);
+  color: var(--softTextColor);
+  font-size: 18px;
+}
+
+.cryptoTable tbody tr:hover {
+  color: var(--softTextColor);
+  cursor: pointer;
+}
+
+.cryptoTable td {
+  font-size: 16px;
+  color: var(--softTextColor);
+}
+
+.cryptoInfo {
+  display: flex;
+  align-items: center;
+}
+
+.cryptoInfo img {
+  margin-right: 8px;
+}
+
+@media (width < 1024px) {
+  .content h1 {
+    text-align: center;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    top: 59px;
+  }
+
+  .content h1 {
+    font-size: 55px;
+    margin: 0;
+    margin-left: 250px;
+  }
+
+  .paragraphContainer {
+    margin-left: 255px;
+    margin-top: 40px;
+  }
+
+  .infoBox {
+    left: 610px;
+    top: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: auto;
+    padding: 20px 0;
+  }
+  .content {
+    right: 0;
+    top: 0;
+    text-align: center;
+  }
+  .content h1 {
+    font-size: 36px;
+    margin-left: 0;
+  }
+  .paragraphContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .paragraphContainer span {
+    width: 10%;
+    height: 0.1px;
+  }
+
+  .paragraphContainer p {
+    width: 60%;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .buttonInfoContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .goApp {
+    width: 25%;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .infoBox {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .cryptoTable {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: justify;
+  }
+
+  .cryptoInfo {
+    justify-content: flex-start;
+  }
+
+  @keyframes one {
+    0% {
+      right: 0rem;
+      top: 0rem;
+    }
+    25% {
+      right: 0rem;
+      top: 5rem;
+    }
+    50% {
+      right: 2rem;
+      top: 8rem;
+    }
+    75% {
+      right: 5rem;
+      top: 10rem;
+    }
+    100% {
+      right: 0rem;
+      top: 0rem;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 440px) {
+  .heroSection {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .content {
+    right: 0;
+    top: 0;
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 25px;
+  }
+
+  .paragraphContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .paragraphContainer span {
+    width: 10%;
+    height: 0.1px;
+  }
+
+  .paragraphContainer p {
+    width: 75%;
+    text-align: center;
+    font-size: 11px;
+  }
+
+  .buttonInfoContainer {
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .goApp {
+    width: 40%;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .infoBox {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .cryptoInfo {
+    justify-content: flex-start;
+  }
+
+  .cryptoTable th {
+    font-size: 14px;
+  }
+
+  #circle,
+  #circle2,
+  #circle3 {
+    animation: static;
+  }
+
+  @keyframes one {
+    0% {
+      right: 0rem;
+      top: 0rem;
+    }
+    25% {
+      right: 0rem;
+      top: 7rem;
+    }
+    50% {
+      right: 2rem;
+      top: 10rem;
+    }
+    75% {
+      right: 5rem;
+      top: 12rem;
+    }
+    100% {
+      right: 0rem;
+      top: 0rem;
+    }
+  }
+
+  #circle2,
+  #circle3 {
+    display: none;
+  }
+}

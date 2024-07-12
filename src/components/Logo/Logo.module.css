@@ -1,0 +1,17 @@
+.fullLogo {
+  display: block;
+}
+
+.icon {
+  display: none;
+}
+
+@media (max-width: 440px) {
+  .fullLogo {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+  }
+}
