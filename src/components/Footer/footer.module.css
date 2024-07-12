@@ -58,7 +58,13 @@
   transform: scale(1.2);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .container {
+    gap: 0px;
+  }
+}
+
+@media (max-width: 600px) {
   .container {
     gap: 0;
   }
