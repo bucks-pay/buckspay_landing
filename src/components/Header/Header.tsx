@@ -45,8 +45,7 @@ export const Header = () => {
             <div className={styles.containerButtons}>
                 <div className={`${styles.button} `}>
                     <LanguageSwitcher />
-                    {/* https://app.buckspay.xyz/ */}
-                    <Link className={styles.goApp} href={"https://buckspay.xyz/"} target="_blank" rel="noopener noreferrer">{t("goApp")}</Link>
+                    <Link className={styles.goApp} href={process.env.NEXT_PUBLIC_STAGE == "dev" ? "https://localhost:3002" : "https://app.buckspay.xyz"} target="_blank" rel="noopener noreferrer">{t("goApp")}</Link>
                 </div>
                 <HamburgerMenu onClick={toggleMenu} />
             </div>

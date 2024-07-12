@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
     };
 
     useEffect(() => {
-        if (process.env.NEXT_PUBLIC_STAGE === 'development') {
+        if (process.env.NEXT_PUBLIC_STAGE === 'dev') {
             setCryptoData(staticData);
         } else {
             getCoinMarketCap();
