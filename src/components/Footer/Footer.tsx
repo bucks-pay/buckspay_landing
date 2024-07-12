@@ -36,16 +36,16 @@ export const Footer = () => {
                     </ul>
                 </div>
                 <div className={styles.button}>
-                    <Link href={"/"} className={styles.logo}>
+                    <Link href={"https://x.com/buckspay_"} className={styles.logo} target="_blank" rel="noopener noreferrer">
                         <Image src={"/social/x.png"} alt="logo" width={25} height={25} />
                     </Link>
-                    <Link href={"/"} className={styles.logo}>
+                    <Link href={"https://www.instagram.com/buckspay_"} className={styles.logo} target="_blank" rel="noopener noreferrer">
                         <Image src={"/social/instagram.png"} alt="logo" width={25} height={25} />
                     </Link>
-                    <Link href={"/"} className={styles.logo}>
+                    <Link href={"https://warpcast.com/buckspay"} className={styles.logo} target="_blank" rel="noopener noreferrer">
                         <Image src={"/social/warpcast.png"} alt="logo" width={25} height={25} />
                     </Link>
-                    <Link href={"/"} className={styles.logo}>
+                    <Link href={"https://t.me/buckspay"} className={styles.logo} target="_blank" rel="noopener noreferrer">
                         <Image src={"/social/telegram.png"} alt="logo" width={25} height={25} />
                     </Link>
                 </div>
