@@ -5,12 +5,21 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import Modal from "@/components/Modal/Modal";
 
-const ContactSection: React.FC = () => {
+interface IContactSection {
+  isLoading: boolean;
+  setIsLoading: any;
+  setTextLoading: any;
+}
+
+const ContactSection: React.FC<IContactSection> = ({
+  isLoading,
+  setIsLoading,
+  setTextLoading,
+}) => {
   const { t } = useTranslation(["landing"]);
   const [isFormValid, setIsFormValid] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const [modalMessages, setModalMessages] = useState<string[]>([]);
   const formEmpty = {
@@ -24,6 +33,7 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setTextLoading("Enviando tus datos para contacto");
     setIsLoading(true);
     const data = {
       name: form.fullName,
@@ -32,7 +42,12 @@ const ContactSection: React.FC = () => {
       message: form.message,
     };
     try {
-      const result = await fetch("https://apiv1.buckspay.xyz/contact", {
+      const baseUrl =
+        process.env.NEXT_PUBLIC_STAGE == "dev"
+          ? "http://localhost:3000"
+          : "https://apiv1.buckspay.xyz";
+      console.log({ baseUrl });
+      const result = await fetch(`${baseUrl}/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -41,7 +56,7 @@ const ContactSection: React.FC = () => {
       });
       if (result.status === 201) {
         setIsSuccess(true);
-        setModalTitle(t("contactSection.modal.sucessTitle"));
+        setModalTitle(t("contactSection.modal.successTitle"));
         setModalMessages([
           t("contactSection.modal.successMessage1"),
           t("contactSection.modal.successMessage2"),

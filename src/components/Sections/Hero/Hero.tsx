@@ -12,7 +12,11 @@ const HeroSection: React.FC = () => {
 
   const getCoinMarketCap = async () => {
     try {
-      const response = await fetch("https://apiv1.buckspay.xyz/coinmarketcap");
+      const baseUrl =
+        process.env.NEXT_PUBLIC_STAGE == "dev"
+          ? "http://localhost:3000"
+          : "https://apiv1.buckspay.xyz";
+      const response = await fetch(`${baseUrl}/coinmarketcap`);
       const result = await response.json();
       setCryptoData(result.data);
     } catch (error) {
