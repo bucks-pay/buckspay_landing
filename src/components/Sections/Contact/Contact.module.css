@@ -58,11 +58,13 @@
   flex: 1;
   background-color: #414141;
   padding: 40px;
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 .formHeader {
   display: flex;
@@ -74,6 +76,7 @@
 .formGroup,
 .term {
   margin-bottom: 20px;
+
 }
 
 .formGroup label,

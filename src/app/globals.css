@@ -30,6 +30,7 @@
   --bubble4Variant1: #0000ff;
   --bubble4Variant2: #b700ff;
   --bubble4Variant3: #1900ff;
+  --tableColor: #414141;
 }
 
 .light {
@@ -55,6 +56,7 @@
   --bubble4Variant1: #0000ff00;
   --bubble4Variant2: #b700ff00;
   --bubble4Variant3: #1900ff00;
+  --tableColor: #fff;
 }
 
 body {
