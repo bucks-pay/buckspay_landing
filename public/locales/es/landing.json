@@ -12,9 +12,10 @@
     }
   },
   "servicesSection": {
-    "title": "Conviértete en uno de nuestros aliados y sé un liquidador e",
-    "increase": "incrementa tus ganancias",
-    "subtitle": "Aprende sobre las ventajas de ser un liquidador.",
+    "title-1": "Conviértete en un proveedor de liquidez, facilitando los pagos con moneda local",
+    "increase": "(on-ramp)",
+    "title-2": "y ofreciendo liquidez a usuarios de todo el mundo.",
+    "subtitle": "Obtén ganancias mientras mejoras la accesibilidad financiera descentralizada en el mercado global.",
     "contact": "Contáctanos",
     "find": "Encuentre el mejor precio con nuestros liquidadores cualificados a nivel nacional.",
     "price": "Encuentre el precio perfecto."
