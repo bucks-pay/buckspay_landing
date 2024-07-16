@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 760px;
+  height: 820px;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -102,16 +102,18 @@
 }
 
 .content {
-  position: relative;
+  margin-top: 150px;
   z-index: 1;
   top: 180px;
   right: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
 .content h1 {
   font-size: 64px;
   font-weight: 600;
-  margin: 20px 0;
+  margin: 20px 2rem;
 }
 
 .content p {
@@ -124,7 +126,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 10px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .paragraphContainer span {
@@ -136,16 +140,8 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
-  width: 52%;
+  width: 80%;
   padding-left: 15px;
-}
-
-.buttonInfoContainer {
-  position: relative;
-  display: flex;
-  align-items: start;
-  margin-top: 20px;
-  justify-content: space-between;
 }
 
 .goApp {
@@ -176,16 +172,13 @@
 .infoBox {
   padding: 10px;
   width: 555px;
-  position: absolute;
   color: var(--softTextColor);
-  left: 630px;
-  top: -100px;
 }
 
 .cryptoTable {
-  background-color: #83838383;
+  background-color: var(--tableColor);
   width: 100%;
-  border: 1px solid var(--softTextColor);
+  /*border: 1px solid var(--softTextColor);*/
   border-radius: 20px;
   margin: 10px 0;
 }
@@ -221,6 +214,18 @@
   margin-right: 8px;
 }
 
+.content_main_table {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 2rem;
+}
+
+.buttonInfoContainer {
+  margin-top: 80px;
+}
+
 @media (width < 1024px) {
   .content h1 {
     text-align: center;
@@ -242,43 +247,28 @@
   animation: fadeIn 1s ease-in-out forwards;
 }
 
-@media (max-width: 1280px) {
-  .content {
-    top: 109px;
-  }
-
-  .content h1 {
-    font-size: 55px;
-    margin: 0;
-    margin-left: 250px;
-  }
-
-  .paragraphContainer {
-    margin-left: 255px;
-    margin-top: 40px;
-  }
-
-  .infoBox {
-    left: 610px;
-    top: 0px;
-  }
-}
-
 @media (max-width: 1024px) {
+  .buttonInfoContainer {
+    margin-top: 0;
+  }
+
   .heroSection {
     height: auto;
     padding: 20px 0;
-    height: 720px;
   }
   .content {
     right: 0;
-    top: 100px;
     text-align: center;
+    margin-top: 100px;
   }
   .content h1 {
     font-size: 36px;
-    margin-left: 0;
   }
+  .content_main_table {
+    align-items: center;
+    flex-direction: column;
+  }
+
   .paragraphContainer {
     flex-direction: column;
     align-items: center;
@@ -359,7 +349,6 @@
     right: 0;
     top: 100px;
     text-align: center;
-    height: 615px;
   }
 
   .content h1 {

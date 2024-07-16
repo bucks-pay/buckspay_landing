@@ -61,16 +61,4 @@ export const staticData: CryptoDataProps[] = [
       },
     },
   },
-  {
-    id: 6,
-    name: "TRON",
-    symbol: "TRX",
-    slug: "tron",
-    quote: {
-      USD: {
-        price: 0.07,
-        volume_change_24h: -0.8,
-      },
-    },
-  },
 ];

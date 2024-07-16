@@ -13,9 +13,10 @@
   },
 
   "servicesSection": {
-    "title": "Become one of our allies and be a liquidator and",
-    "increase": "increase your profits",
-    "subtitle": "Learn about the benefits as a liquidator.",
+    "title-1": "Become a liquidity provider, facilitating local currency payments",
+    "increase": "(on-ramp)",
+    "title-2": "and offering liquidity to users worldwide.",
+    "subtitle": "Earn profits while enhancing decentralized financial accessibility in the global market.",
     "contact": "Contact Us",
     "find": "Find the best price with our nationally qualified liquidators.",
     "price": "Find The Perfect Price."

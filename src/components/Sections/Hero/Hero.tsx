@@ -8,9 +8,10 @@ import { staticData } from "@/utils/staticData";
 
 const HeroSection: React.FC = () => {
   const [cryptoData, setCryptoData] = useState<CryptoDataProps[]>([]);
-  const filteredSymbols = ["AVAX", "ETH", "BTC", "MATIC", "LINK", "TRX"];
+  const filteredSymbols = ["AVAX", "ETH", "BTC", "MATIC", "LINK"];
 
   const getCoinMarketCap = async () => {
+    let dataToShow;
     try {
       const baseUrl =
         process.env.NEXT_PUBLIC_STAGE == "dev"
@@ -18,10 +19,15 @@ const HeroSection: React.FC = () => {
           : "https://apiv1.buckspay.xyz";
       const response = await fetch(`${baseUrl}/coinmarketcap`);
       const result = await response.json();
-      setCryptoData(result.data);
+      dataToShow = result.data;
     } catch (error) {
       console.error("Error fetching CoinMarketCap data:", error);
+      dataToShow = staticData;
     }
+    const filteredData = dataToShow.filter((crypto: { symbol: string }) =>
+      filteredSymbols.includes(crypto.symbol)
+    );
+    setCryptoData(filteredData);
   };
 
   useEffect(() => {
@@ -32,9 +38,6 @@ const HeroSection: React.FC = () => {
     }
   }, []);
 
-  const filteredData = cryptoData.filter((crypto) =>
-    filteredSymbols.includes(crypto.symbol)
-  );
   const { t } = useTranslation(["landing"]);
   return (
     <section id="hero" className={styles.heroSection}>
@@ -48,53 +51,57 @@ const HeroSection: React.FC = () => {
           {" "}
           {t("heroSection.title")} <br /> {t("heroSection.start")}
         </h1>
-        <div className={`${styles.paragraphContainer} fade-in`}>
-          <span></span>
-          <p>{t("heroSection.paragraph")}</p>
-        </div>
-        <div className={`${styles.buttonInfoContainer} fade-in`}>
-          {/* <button className={styles.goApp}>{t("heroSection.goApp")}</button> */}
-          <div className={styles.infoBox}>
-            <table className={styles.cryptoTable}>
-              <thead className={styles.contentHead}>
-                <tr>
-                  <th>{t("heroSection.infoBox.name")}</th>
-                  <th>{t("heroSection.infoBox.price")}</th>
-                  <th>{t("heroSection.infoBox.volumeChange24h")}</th>
-                </tr>
-              </thead>
-              <tbody className={styles.contentBody}>
-                {filteredData.map((crypto) => (
-                  <tr key={crypto.id}>
-                    <td>
-                      <div className={styles.cryptoInfo}>
-                        <Image
-                          src={`/icons/crypto/${crypto.symbol}.png`}
-                          alt={crypto.symbol}
-                          width={20}
-                          height={20}
-                        />
-                        <span>
-                          {crypto.symbol} {crypto.name}
-                        </span>
-                      </div>
-                    </td>
-                    <td>${crypto.quote.USD.price.toFixed(2)}</td>
-                    <td
-                      style={{
-                        color:
-                          crypto.quote.USD.volume_change_24h < 0
-                            ? "red"
-                            : "green",
-                      }}
-                    >
-                      {crypto.quote.USD.volume_change_24h.toFixed(2)}%
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <div className={styles.content_main_table}>
+          <div className={`${styles.paragraphContainer} fade-in`}>
+            <span></span>
+            <p>{t("heroSection.paragraph")}</p>
           </div>
+          {cryptoData.length > 0 && (
+            <div className={`${styles.buttonInfoContainer} fade-in`}>
+              {/* <button className={styles.goApp}>{t("heroSection.goApp")}</button> */}
+              <div className={styles.infoBox}>
+                <table className={styles.cryptoTable}>
+                  <thead className={styles.contentHead}>
+                    <tr>
+                      <th>{t("heroSection.infoBox.name")}</th>
+                      <th>{t("heroSection.infoBox.price")}</th>
+                      <th>{t("heroSection.infoBox.volumeChange24h")}</th>
+                    </tr>
+                  </thead>
+                  <tbody className={styles.contentBody}>
+                    {cryptoData.map((crypto) => (
+                      <tr key={crypto.id}>
+                        <td>
+                          <div className={styles.cryptoInfo}>
+                            <Image
+                              src={`/icons/crypto/${crypto.symbol}.png`}
+                              alt={crypto.symbol}
+                              width={20}
+                              height={20}
+                            />
+                            <span>
+                              {crypto.symbol} {crypto.name}
+                            </span>
+                          </div>
+                        </td>
+                        <td>${crypto.quote.USD.price.toFixed(2)}</td>
+                        <td
+                          style={{
+                            color:
+                              crypto.quote.USD.volume_change_24h < 0
+                                ? "red"
+                                : "green",
+                          }}
+                        >
+                          {crypto.quote.USD.volume_change_24h.toFixed(2)}%
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
