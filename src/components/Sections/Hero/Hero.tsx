@@ -48,52 +48,54 @@ const HeroSection: React.FC = () => {
           {" "}
           {t("heroSection.title")} <br /> {t("heroSection.start")}
         </h1>
-        <div className={`${styles.paragraphContainer} fade-in`}>
-          <span></span>
-          <p>{t("heroSection.paragraph")}</p>
-        </div>
-        <div className={`${styles.buttonInfoContainer} fade-in`}>
-          {/* <button className={styles.goApp}>{t("heroSection.goApp")}</button> */}
-          <div className={styles.infoBox}>
-            <table className={styles.cryptoTable}>
-              <thead className={styles.contentHead}>
-                <tr>
-                  <th>{t("heroSection.infoBox.name")}</th>
-                  <th>{t("heroSection.infoBox.price")}</th>
-                  <th>{t("heroSection.infoBox.volumeChange24h")}</th>
-                </tr>
-              </thead>
-              <tbody className={styles.contentBody}>
-                {filteredData.map((crypto) => (
-                  <tr key={crypto.id}>
-                    <td>
-                      <div className={styles.cryptoInfo}>
-                        <Image
-                          src={`/icons/crypto/${crypto.symbol}.png`}
-                          alt={crypto.symbol}
-                          width={20}
-                          height={20}
-                        />
-                        <span>
-                          {crypto.symbol} {crypto.name}
-                        </span>
-                      </div>
-                    </td>
-                    <td>${crypto.quote.USD.price.toFixed(2)}</td>
-                    <td
-                      style={{
-                        color:
-                          crypto.quote.USD.volume_change_24h < 0
-                            ? "red"
-                            : "green",
-                      }}
-                    >
-                      {crypto.quote.USD.volume_change_24h.toFixed(2)}%
-                    </td>
+        <div className={styles.content_main_table}>
+          <div className={`${styles.paragraphContainer} fade-in`}>
+            <span></span>
+            <p>{t("heroSection.paragraph")}</p>
+          </div>
+          <div className={`${styles.buttonInfoContainer} fade-in`}>
+            {/* <button className={styles.goApp}>{t("heroSection.goApp")}</button> */}
+            <div className={styles.infoBox}>
+              <table className={styles.cryptoTable}>
+                <thead className={styles.contentHead}>
+                  <tr>
+                    <th>{t("heroSection.infoBox.name")}</th>
+                    <th>{t("heroSection.infoBox.price")}</th>
+                    <th>{t("heroSection.infoBox.volumeChange24h")}</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className={styles.contentBody}>
+                  {filteredData.map((crypto) => (
+                    <tr key={crypto.id}>
+                      <td>
+                        <div className={styles.cryptoInfo}>
+                          <Image
+                            src={`/icons/crypto/${crypto.symbol}.png`}
+                            alt={crypto.symbol}
+                            width={20}
+                            height={20}
+                          />
+                          <span>
+                            {crypto.symbol} {crypto.name}
+                          </span>
+                        </div>
+                      </td>
+                      <td>${crypto.quote.USD.price.toFixed(2)}</td>
+                      <td
+                        style={{
+                          color:
+                            crypto.quote.USD.volume_change_24h < 0
+                              ? "red"
+                              : "green",
+                        }}
+                      >
+                        {crypto.quote.USD.volume_change_24h.toFixed(2)}%
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

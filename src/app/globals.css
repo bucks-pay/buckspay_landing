@@ -65,6 +65,12 @@ body {
   font-family: "Readex Pro", sans-serif;
 }
 
+body textarea {
+  font-family: "Readex Pro", sans-serif;
+  font-size: 13px;
+  font-weight: 350;
+}
+
 .containerMain {
   display: flex;
   flex-direction: column;
