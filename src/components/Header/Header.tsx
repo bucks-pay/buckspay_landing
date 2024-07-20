@@ -6,7 +6,6 @@ import Logo from "../Logo/Logo";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import Image from "next/image";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 export const Header = () => {
   const { t } = useTranslation(["header"]);

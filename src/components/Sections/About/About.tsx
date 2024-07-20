@@ -15,7 +15,7 @@ const AboutSection: React.FC = () => {
         <div className={styles.imageBox}>
           <Image
             className={styles.img}
-            src="/background/Security.png"
+            src="/background/opcion-3.jpg"
             alt="Security"
             width={280}
             height={490}
