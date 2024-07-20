@@ -37,7 +37,8 @@
   z-index: 1;
 }
 
-.imageBox img {
+.img {
+  border-radius: 20px;
   display: block;
 }
 
@@ -144,29 +145,29 @@
 /* Bubbles 1328px*/
 
 @media (min-width: 1328px) {
-    .bubble2 { 
-      left: 5%;
-      top: 40%;
-      --size: 100px;
-    }
+  .bubble2 {
+    left: 5%;
+    top: 40%;
+    --size: 100px;
+  }
 
-    .bubble3 {
-      left: 2%;
-      top: 70%;
-      --size: 150px;
-    }
+  .bubble3 {
+    left: 2%;
+    top: 70%;
+    --size: 150px;
+  }
 
-    .bubble4 {
-      left: 88%;
-      top: 70%;
-      --size: 100px;
-    }
+  .bubble4 {
+    left: 88%;
+    top: 70%;
+    --size: 100px;
+  }
 
-    .bubble1 {
-      left: 88%;
-      top: 40%;
-      --size: 150px
-    }
+  .bubble1 {
+    left: 88%;
+    top: 40%;
+    --size: 150px;
+  }
 }
 
 /* Tablet */
@@ -194,6 +195,7 @@
   }
 
   .img {
+    border-radius: 20px;
     width: 150px;
     height: 250px;
   }
@@ -205,7 +207,6 @@
   .bubble {
     display: none;
   }
-
 }
 
 /* Mobile */
@@ -223,7 +224,6 @@
   .aboutUsSection p {
     font-size: 20px;
   }
-
 
   .imagesContainer {
     gap: 30px;
