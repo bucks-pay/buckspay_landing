@@ -3,9 +3,8 @@
   width: 100%;
   justify-content: space-evenly;
   padding: 10px 0px;
-  background-color: #013646;
-  gap: 100px;
-  z-index: 1000;
+  background-color: #17184f;
+  z-index: 2;
 }
 
 .logo {
@@ -24,9 +23,10 @@
 }
 
 .menu {
-  gap: 20px;
+  gap: 10px;
   display: flex;
   flex-direction: column;
+  padding-inline-start: 0px;
 }
 
 .menu > li {
@@ -58,17 +58,13 @@
   transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
-  .container {
-    gap: 0px;
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .container {
     gap: 0;
   }
+}
 
+@media (max-width: 580px) {
   .menu {
     padding: 0;
     margin: auto;

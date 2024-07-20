@@ -37,11 +37,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #013646;
+  background-color: #17184f;
   border-radius: 10px;
   overflow: hidden;
   max-width: 1000px;
   width: 100%;
+  border: #414141 solid 1px;
   margin: 0 auto;
 }
 
@@ -65,7 +66,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .formHeader {
   display: flex;
   justify-content: start;
@@ -76,7 +76,6 @@
 .formGroup,
 .term {
   margin-bottom: 20px;
-
 }
 
 .formGroup label,
