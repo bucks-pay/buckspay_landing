@@ -37,7 +37,8 @@
   z-index: 1;
 }
 
-.imageBox img {
+.img {
+  border-radius: 20px;
   display: block;
 }
 
