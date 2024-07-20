@@ -7,8 +7,8 @@ import { CryptoDataProps } from "@/types";
 import { staticData } from "@/utils/staticData";
 
 const HeroSection: React.FC = () => {
-  const { t } = useTranslation(["landing"]);
   const [cryptoData, setCryptoData] = useState<CryptoDataProps[]>([]);
+  const filteredSymbols = ["AVAX", "ETH", "BTC", "MATIC", "LINK"];
 
   const getCoinMarketCap = async () => {
     let dataToShow;
@@ -19,28 +19,26 @@ const HeroSection: React.FC = () => {
           : "https://apiv1.buckspay.xyz";
       const response = await fetch(`${baseUrl}/coinmarketcap`);
       const result = await response.json();
-      setCryptoData(result);
+      dataToShow = result.data;
     } catch (error) {
       console.error("Error fetching CoinMarketCap data:", error);
       dataToShow = staticData;
     }
+    const filteredData = dataToShow.filter((crypto: { symbol: string }) =>
+      filteredSymbols.includes(crypto.symbol)
+    );
+    setCryptoData(filteredData);
   };
 
   useEffect(() => {
     if (process.env.NEXT_PUBLIC_STAGE === "dev") {
       setCryptoData(staticData);
     } else {
+      getCoinMarketCap();
     }
-    getCoinMarketCap();
   }, []);
 
-  const formatPrice = (price: number) => {
-    return price?.toLocaleString('en-US', {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
-  };
-
+  const { t } = useTranslation(["landing"]);
   return (
     <section id="hero" className={styles.heroSection}>
       <div className={styles.background}>
@@ -71,8 +69,8 @@ const HeroSection: React.FC = () => {
                     </tr>
                   </thead>
                   <tbody className={styles.contentBody}>
-                    {cryptoData.map((crypto, index) => (
-                      <tr key={index}>
+                    {cryptoData.map((crypto) => (
+                      <tr key={crypto.id}>
                         <td>
                           <div className={styles.cryptoInfo}>
                             <Image
@@ -86,16 +84,16 @@ const HeroSection: React.FC = () => {
                             </span>
                           </div>
                         </td>
-                        <td>${formatPrice(crypto.price_usd)}</td>
+                        <td>${crypto.quote.USD.price.toFixed(2)}</td>
                         <td
                           style={{
                             color:
-                              crypto.volume_change_24h < 0
+                              crypto.quote.USD.volume_change_24h < 0
                                 ? "red"
                                 : "green",
                           }}
                         >
-                          {crypto.volume_change_24h?.toFixed(2)}%
+                          {crypto.quote.USD.volume_change_24h.toFixed(2)}%
                         </td>
                       </tr>
                     ))}

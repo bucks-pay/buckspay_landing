@@ -136,9 +136,9 @@ const ContactSection: React.FC<IContactSection> = ({
           <div className={styles.leftPanel}>
             <div className={styles.iconContainer}>
               <Image
-                src="/contact-us.png"
-                alt="ContactUs"
-                width={300}
+                src="/pig_contact_us.png"
+                alt="Security"
+                width={200}
                 height={300}
               />
             </div>
@@ -233,8 +233,9 @@ const ContactSection: React.FC<IContactSection> = ({
           onClose={() => setIsModalOpen(false)}
         >
           <div
-            className={`${styles.contentModal} ${isSuccess ? styles.modalSuccess : styles.modalError
-              }`}
+            className={`${styles.contentModal} ${
+              isSuccess ? styles.modalSuccess : styles.modalError
+            }`}
           >
             {modalMessages.map((message, index) => (
               <p className={styles.message} key={index}>

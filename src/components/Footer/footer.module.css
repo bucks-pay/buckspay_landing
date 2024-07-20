@@ -3,8 +3,9 @@
   width: 100%;
   justify-content: space-evenly;
   padding: 10px 0px;
-  background-color: #17184f;
-  z-index: 2;
+  background-color: #013646;
+  gap: 100px;
+  z-index: 1000;
 }
 
 .logo {
@@ -23,10 +24,9 @@
 }
 
 .menu {
-  gap: 10px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
-  padding-inline-start: 0px;
 }
 
 .menu > li {
@@ -58,13 +58,17 @@
   transform: scale(1.2);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .container {
-    gap: 0;
+    gap: 0px;
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
+  .container {
+    gap: 0;
+  }
+
   .menu {
     padding: 0;
     margin: auto;

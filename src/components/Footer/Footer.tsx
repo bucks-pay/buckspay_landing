@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import styles from './footer.module.css';
 import Link from 'next/link';
+import LanguageSwitcher from '../Language/LanguageSwitcher';
+import Logo from '../Logo/Logo';
 import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
@@ -10,9 +12,8 @@ export const Footer = () => {
     return (
         <footer className={styles.container}>
             <Link href={"/"} className={`${styles.logo} ${styles.linkLogo}`}>
-                <Image className={styles.fullLogo} src={"/logos/buckspay-text-light.png"} alt='logo' width={190} height={50} />
+                <Image className={styles.fullLogo} src={"/logos/buckspay-text-light.png"} alt='logo' width={190} height={60} />
             </Link>
-            <div className={styles.null}></div>
             <div className={styles.null}></div>
             <div className={styles.containerSocial}>
                 <div className={styles.contaimerMenu}>
