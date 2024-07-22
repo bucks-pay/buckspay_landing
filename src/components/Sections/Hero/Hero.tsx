@@ -15,8 +15,11 @@ const HeroSection: React.FC = () => {
     try {
       const baseUrl =
         process.env.NEXT_PUBLIC_STAGE == "dev"
-          ? "http://localhost:3000"
-          : "https://apiv1.buckspay.xyz";
+          ? "https://marralu.apiv1.buckspay.xyz"
+          : process.env.NEXT_PUBLIC_STAGE == "local"
+            ? "http://localhost:3000"
+            : "https://apiv1.buckspay.xyz";
+
       const response = await fetch(`${baseUrl}/coinmarketcap`);
       const result = await response.json();
       setCryptoData(result);
