@@ -37,6 +37,10 @@
     "user": "usuario",
     "titleSecond": " y recibe información adicional sobre nuestros servicios.",
     "form": {
+      "country": "PAÍS",
+      "typeIdentification": "TIPO DE IDENTIFICACIÓN",
+      "identification": "IDENTIFICACIÓN",
+      "identificationPlaceholder": "Ingresa tu número de identificación",
       "fullName": "NOMBRE COMPLETO",
       "fullNamePlaceholder": "Ingresa tu nombre completo",
       "phone": "TELÉFONO",

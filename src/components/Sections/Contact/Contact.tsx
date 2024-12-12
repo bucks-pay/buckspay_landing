@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import Modal from "@/components/Modal/Modal";
+import { country, typeIdentification } from "@/utils/data";
 
 interface IContactSection {
   isLoading: boolean;
@@ -23,6 +24,9 @@ const ContactSection: React.FC<IContactSection> = ({
   const [modalTitle, setModalTitle] = useState("");
   const [modalMessages, setModalMessages] = useState<string[]>([]);
   const formEmpty = {
+    country: country[0],
+    typeIdentification: typeIdentification[0],
+    identification: "",
     fullName: "",
     phone: "",
     email: "",
@@ -36,6 +40,9 @@ const ContactSection: React.FC<IContactSection> = ({
     setTextLoading("Enviando tus datos para contacto");
     setIsLoading(true);
     const data = {
+      country: form.country,
+      typeIdentification: form.typeIdentification,
+      identification: form.identification,
       name: form.fullName,
       phone: form.phone,
       email: form.email,
@@ -46,7 +53,6 @@ const ContactSection: React.FC<IContactSection> = ({
         process.env.NEXT_PUBLIC_STAGE == "dev"
           ? "http://localhost:3000"
           : "https://apiv1.buckspay.xyz";
-      console.log({ baseUrl });
       const result = await fetch(`${baseUrl}/contact`, {
         method: "POST",
         headers: {
@@ -85,34 +91,33 @@ const ContactSection: React.FC<IContactSection> = ({
     }
   };
 
-  const handleInputChange = useCallback(
-    (
-      e: React.ChangeEvent<
-        HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-      >
-    ) => {
-      const { name, value, type } = e.target;
-      const fieldValue =
-        type === "checkbox" && e.target instanceof HTMLInputElement
-          ? e.target.checked
-          : value;
-      setForm((prevForm) => ({
-        ...prevForm,
-        [name]: fieldValue,
-      }));
-    },
-    []
-  );
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
+    const { name, value, type } = e.target;
+    const fieldValue =
+      type === "checkbox" && e.target instanceof HTMLInputElement
+        ? e.target.checked
+        : value;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]: fieldValue,
+    }));
+  };
 
   useEffect(() => {
     const isValid =
-      form.fullName !== "" &&
+      form.country !== "" &&
+      form.typeIdentification !== "" &&
+      form.identification !== "" &&
       form.phone !== "" &&
       form.email !== "" &&
       form.message !== "" &&
       form.terms !== false;
     setIsFormValid(isValid);
-  }, [form.email, form.fullName, form.message, form.phone, form.terms]);
+  }, [form.country, form.email, form.fullName, form.identification, form.message, form.phone, form.terms, form.typeIdentification]);
 
   return (
     <>
@@ -145,6 +150,42 @@ const ContactSection: React.FC<IContactSection> = ({
           </div>
           <div className={styles.rightPanel}>
             <div className={styles.formHeader}></div>
+            <div className={styles.formGroup}>
+              <label htmlFor="country">
+                {t("contactSection.form.country")}
+              </label>
+              <select onChange={handleInputChange} value={form.country} name="country">
+                {country.map((el: string) => (
+                  <option key={el} value={el}>
+                    {el}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="typeIdentification">
+                {t("contactSection.form.typeIdentification")}
+              </label>
+              <select onChange={handleInputChange} value={form.typeIdentification} name="typeIdentification">
+                {typeIdentification.map((el: string) => (
+                  <option key={el} value={el}>
+                    {el}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="identification">{t("contactSection.form.identification")}</label>
+              <input
+                type="text"
+                id="identification"
+                required
+                name="identification"
+                placeholder={t("contactSection.form.identificationPlaceholder")}
+                onChange={handleInputChange}
+                value={form.identification}
+              />
+            </div>
             <div className={styles.formGroup}>
               <label htmlFor="fullName">
                 {t("contactSection.form.fullName")}

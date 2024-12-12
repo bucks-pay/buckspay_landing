@@ -39,6 +39,10 @@
     "user": "user",
     "titleSecond": "and receive additional information about our services.",
     "form": {
+      "country": "COUNTRY",
+      "typeIdentification": "TYPE OF IDENTIFICATION",
+      "identification": "IDENTIFICATION",
+      "identificationPlaceholder": "Enter your ID number",
       "fullName": "FULL NAME",
       "fullNamePlaceholder": "Enter your full name",
       "phone": "PHONE",
