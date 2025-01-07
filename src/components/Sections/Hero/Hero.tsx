@@ -43,15 +43,9 @@ const HeroSection: React.FC = () => {
 
   return (
     <section id="hero" className={styles.heroSection}>
-      <div className={styles.background}>
-        <div className={styles.circle} id={styles.circle1}></div>
-        <div className={styles.circle} id={styles.circle2}></div>
-        <div className={styles.circle} id={styles.circle3}></div>
-      </div>
       <div className={styles.content}>
         <h1 className="fade-in">
-          {" "}
-          {t("heroSection.title")} <br /> {t("heroSection.start")}
+          {t("heroSection.title")} <br /> {t("heroSection.start")} <span className={styles.highlight}>{t("heroSection.recolor")}</span>
         </h1>
         <div className={styles.content_main_table}>
           <div className={`${styles.paragraphContainer} fade-in`}>
@@ -105,6 +99,10 @@ const HeroSection: React.FC = () => {
             </div>
           )}
         </div>
+      </div>
+      <div className={styles.vectors}>
+        <img src="/Vector.png" alt="Vector 1" className={styles.vector1} />
+        <img src="/Vector 2.png" alt="Vector 2" className={styles.vector2} />
       </div>
     </section>
   );

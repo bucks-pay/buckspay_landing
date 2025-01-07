@@ -1,8 +1,9 @@
 {
   "heroSection": {
-    "title": "El Futuro de las Transacciones",
-    "start": "¡Comienza Ahora!",
-    "paragraph": "Con BucksPay, administra tus finanzas de manera más fácil. Puedes pagar con tus criptomonedas en cualquier lugar con pocos clics.",
+    "title": "La forma mas simple de",
+    "start": "pagar con",
+    "recolor": "criptomonedas",
+    "paragraph": "Con BucksPay, realiza pagos diarios en criptomonedas de forma sencilla, sin bancos ni conversiones complicadas.",
     "goApp": "Ir a la App",
     "infoBox": {
       "symbol": "Símbolo",
@@ -12,13 +13,8 @@
     }
   },
   "servicesSection": {
-    "title-1": "Conviértete en un proveedor de liquidez, facilitando los pagos con moneda local",
-    "increase": "(on-ramp)",
-    "title-2": "y ofreciendo liquidez a usuarios de todo el mundo.",
-    "subtitle": "Obtén ganancias mientras mejoras la accesibilidad financiera descentralizada en el mercado global.",
-    "contact": "Contáctanos",
-    "find": "Encuentre el mejor precio con nuestros liquidadores cualificados a nivel nacional.",
-    "price": "Encuentre el precio perfecto."
+    "title-1": "Diseñado para que cualquier persona, en cualquier lugar, pueda pagar con confianza.",
+    "subtitle": "Pagos más simples, para un mundo más conectado."
   },
   "aboutSection": {
     "title": "Acerca de Nosotros",
