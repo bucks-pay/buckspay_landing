@@ -4,7 +4,7 @@
   position: relative;
   padding-top: 100px;
   z-index: 1;
-
+  color: white;
 }
 
 .animatedBackground {
@@ -13,11 +13,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(270deg, #16205fd5,#64e1f4d5);
+  background: linear-gradient(270deg, #16205fd5, #64e1f4d5);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
   z-index: -1; /* Ensure the background is behind other content */
-
 }
 
 @keyframes gradientAnimation {
@@ -54,7 +53,6 @@
   position: relative;
   z-index: 1;
   flex-wrap: wrap; /* Allows wrapping of items */
-  
 }
 
 .imageBox {
@@ -74,7 +72,6 @@
   margin: 30px;
 }
 
-
 .imageLabel {
   margin-top: 10px;
   color: #fff;
@@ -82,7 +79,6 @@
   font-size: 20px;
   font-weight: 700;
 }
-
 
 /* Tablet */
 @media (max-width: 980px) {
@@ -108,14 +104,11 @@
     gap: 30px;
   }
 
-
-
   .imageBox {
     width: 45%; /* Adjust width for better layout on tablets */
     margin: 0 auto;
     justify-content: center;
   }
-
 
   .imageLabel {
     font-size: 26px;
@@ -152,16 +145,13 @@
     gap: 30px;
   }
 
-
   .imageBox {
-    width: 80%; 
+    width: 80%;
     margin: 0 auto;
   }
-
 
   .imageLabel {
     font-size: 24px;
     bottom: 5px;
   }
-
 }

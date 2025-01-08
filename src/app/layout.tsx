@@ -5,7 +5,6 @@ import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
-import ThemeSwitcher from "@/components/themeSwitcher/ThemeSwitcher";
 
 export const metadata: Metadata = {
   title: "BucksPay",
@@ -26,7 +25,6 @@ export default function RootLayout({
               <Header />
               <main>{children}</main>
               <Footer />
-              <ThemeSwitcher />
             </div>
           </ThemeProvider>
         </ThemeContextProvider>

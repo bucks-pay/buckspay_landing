@@ -1,28 +1,59 @@
-"use client"
+"use client";
 import { useContext } from "react";
 import Image from "next/image";
 import { ThemeContext } from "@/context/ThemeContext";
 import styles from "./Logo.module.css";
 const Logo = () => {
-    const context = useContext(ThemeContext);
+  const context = useContext(ThemeContext);
 
-    if (!context) {
-        throw new Error('ThemeToggle must be used within a ThemeContextProvider');
-    }
+  if (!context) {
+    throw new Error("ThemeToggle must be used within a ThemeContextProvider");
+  }
 
-    const { theme } = context;
+  const { theme } = context;
 
-    const icon = theme === "dark"
-        ? <div>
-            <Image className={styles.fullLogo} src="/logos/buckspay-text-light.png" alt="buckspay-text-light.png" width={190} height={50} />
-            <Image className={styles.icon} src="/logos/icon-white.png" alt="icon-white.png" width={40} height={40} />
-        </div>
-        : <div>
-            <Image className={styles.fullLogo} src="/logos/buckspay-text-dark.png" alt="buckspay-text-dark.png" width={190} height={50} />
-            <Image className={styles.icon} src="/logos/icon-dark.png" alt="icon-dark.png" width={40} height={40} />
-        </div>
+  const icon =
+    theme === "dark" ? (
+      <div>
+        <Image
+          className={styles.fullLogo}
+          src="/logos/buckspay-text-light.png"
+          alt="buckspay-text-light.png"
+          width={190}
+          height={50}
+        />
+        <Image
+          className={styles.icon}
+          src="/logos/icon-white.png"
+          alt="icon-white.png"
+          width={40}
+          height={40}
+        />
+      </div>
+    ) : (
+      <div>
+        <Image
+          className={styles.fullLogo}
+          src="/logos/buckspay-text-light.png"
+          alt="buckspay-text-light.png"
+          width={190}
+          height={50}
+        />
+        <Image
+          className={styles.icon}
+          src="/logos/icon-white.png"
+          alt="icon-white.png"
+          width={40}
+          height={40}
+        />
+      </div>
+    );
+  // : <div>
+  //     <Image className={styles.fullLogo} src="/logos/buckspay-text-dark.png" alt="buckspay-text-dark.png" width={190} height={50} />
+  //     <Image className={styles.icon} src="/logos/icon-dark.png" alt="icon-dark.png" width={40} height={40} />
+  // </div>
 
-    return icon;
+  return icon;
 };
 
 export default Logo;

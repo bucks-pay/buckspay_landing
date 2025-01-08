@@ -33,11 +33,11 @@ export const Header = () => {
                 {t("about")}
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link className={styles.link} href={"#contact"}>
                 {t("contact")}
               </Link>
-            </li>
+            </li> */}
           </ul>
         )}
       </div>
