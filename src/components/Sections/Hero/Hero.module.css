@@ -4,13 +4,14 @@
   justify-content: flex-start;
   align-items: center;
   height: 820px;
-  width: 100vw; 
+  width: 100vw;
   margin: 0 auto;
-  background: linear-gradient(to right,#16205faf,#64e1f4b7), url('/oficina.png') no-repeat center center;
-  background-size: cover; 
+  background: linear-gradient(to right, #16205faf, #64e1f4b7),
+    url("/oficina.png") no-repeat center center;
+  background-size: cover;
   animation: fadeIn 1s ease-in-out forwards;
+  color: white;
 }
-
 
 .content {
   z-index: 1;
@@ -18,9 +19,8 @@
   right: 200px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
-  margin-left: 150px; 
-
+  align-items: flex-start;
+  margin-left: 150px;
 }
 
 .content h1 {
@@ -30,18 +30,18 @@
 }
 
 .highlight {
-  color: #64E0F4; 
+  color: #64e0f4;
 }
 
 .vectors {
   display: flex;
   flex-direction: column;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .vector1,
 .vector2 {
-  width: 220px; 
+  width: 220px;
   height: auto;
 }
 
@@ -77,7 +77,7 @@
   display: inline-block;
   padding: 10px 20px;
   background-color: var(--softTextColor);
-  color: var(--softBg);
+  /* color: var(--softBg); */
   border: none;
   cursor: pointer;
   width: 205px;
@@ -154,7 +154,6 @@
 .buttonInfoContainer {
   margin-top: 80px;
 }
-
 
 /* Media Queries para responsive design */
 @media (max-width: 1024px) {

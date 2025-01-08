@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   const formatPrice = (price: number) => {
-    return price?.toLocaleString('en-US', {
+    return price?.toLocaleString("en-US", {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     });
@@ -45,7 +45,8 @@ const HeroSection: React.FC = () => {
     <section id="hero" className={styles.heroSection}>
       <div className={styles.content}>
         <h1 className="fade-in">
-          {t("heroSection.title")} <br /> {t("heroSection.start")} <span className={styles.highlight}>{t("heroSection.recolor")}</span>
+          {t("heroSection.title")} <br /> {t("heroSection.start")}{" "}
+          <span className={styles.highlight}>{t("heroSection.recolor")}</span>
         </h1>
         <div className={styles.content_main_table}>
           <div className={`${styles.paragraphContainer} fade-in`}>
@@ -84,9 +85,7 @@ const HeroSection: React.FC = () => {
                         <td
                           style={{
                             color:
-                              crypto.volume_change_24h < 0
-                                ? "red"
-                                : "green",
+                              crypto.volume_change_24h < 0 ? "red" : "green",
                           }}
                         >
                           {crypto.volume_change_24h?.toFixed(2)}%

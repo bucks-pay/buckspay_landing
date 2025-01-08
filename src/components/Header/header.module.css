@@ -6,11 +6,12 @@
   justify-content: space-evenly;
   align-items: center;
   padding: 10px 0px;
-  background-color: var(--softBg);
+  background-color: black;
   opacity: 0.9;
   z-index: 1000;
   animation: fadeIn 1s ease-in-out;
   gap: 190px;
+  color: white;
 }
 
 .containerButtons {
@@ -58,7 +59,8 @@
   font-weight: 400;
   line-height: 18.75px;
   text-decoration: none;
-  color: var(--softTextColor);
+  color: white;
+  /* color: var(--softTextColor); */
   transition: font-size 0.8s ease;
 }
 
@@ -117,7 +119,7 @@
   width: 120px;
   height: 40px;
   border-radius: 10px;
-  background-image: linear-gradient(to right, #16205F, #64E0F4);
+  background-image: linear-gradient(to right, #16205f, #64e0f4);
   color: #fff;
   text-decoration: none;
   transition: transform 0.9s ease, background-color 0.3s ease;
@@ -125,8 +127,8 @@
 }
 
 .goApp:hover {
-  background-image: linear-gradient(to right, #2038d3, #0dd3f1); 
-  transform: scale(1.1); 
+  background-image: linear-gradient(to right, #2038d3, #0dd3f1);
+  transform: scale(1.1);
   transition: transform 0.9s ease, background-color 0.3s ease;
 }
 
@@ -180,7 +182,7 @@
     top: 60px;
     left: 0;
     width: 94.5%;
-    background-color: var(--softBg);
+    /* background-color: var(--softBg); */
     padding: 20px;
     z-index: 1000;
   }
