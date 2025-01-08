@@ -1,8 +1,9 @@
 {
   "heroSection": {
-    "title": "El Futuro de las Transacciones",
-    "start": "¡Comienza Ahora!",
-    "paragraph": "Con BucksPay, administra tus finanzas de manera más fácil. Puedes pagar con tus criptomonedas en cualquier lugar con pocos clics.",
+    "title": "La forma mas simple de",
+    "start": "pagar con",
+    "recolor": "criptomonedas",
+    "paragraph": "Con BucksPay, realiza pagos diarios en criptomonedas de forma sencilla, sin bancos ni conversiones complicadas.",
     "goApp": "Ir a la App",
     "infoBox": {
       "symbol": "Símbolo",
@@ -12,13 +13,8 @@
     }
   },
   "servicesSection": {
-    "title-1": "Conviértete en un proveedor de liquidez, facilitando los pagos con moneda local",
-    "increase": "(on-ramp)",
-    "title-2": "y ofreciendo liquidez a usuarios de todo el mundo.",
-    "subtitle": "Obtén ganancias mientras mejoras la accesibilidad financiera descentralizada en el mercado global.",
-    "contact": "Contáctanos",
-    "find": "Encuentre el mejor precio con nuestros liquidadores cualificados a nivel nacional.",
-    "price": "Encuentre el precio perfecto."
+    "title-1": "Diseñado para que cualquier persona, en cualquier lugar, pueda pagar con confianza.",
+    "subtitle": "Pagos más simples, para un mundo más conectado."
   },
   "aboutSection": {
     "title": "Acerca de Nosotros",
@@ -31,18 +27,11 @@
   },
   "contactSection": {
     "title": "Contáctanos",
-    "titleFirst": "Sé parte de nosotros como",
-    "liquidator": "liquidador",
-    "or": "o",
-    "user": "usuario",
-    "titleSecond": " y recibe información adicional sobre nuestros servicios.",
     "form": {
-      "country": "PAÍS",
-      "typeIdentification": "TIPO DE IDENTIFICACIÓN",
-      "identification": "IDENTIFICACIÓN",
-      "identificationPlaceholder": "Ingresa tu número de identificación",
-      "fullName": "NOMBRE COMPLETO",
+      "fullName": "NOMBRE",
       "fullNamePlaceholder": "Ingresa tu nombre completo",
+      "lastName":"APELLIDOS",
+      "lastNamePlaceholder": "Ingresa tus apellidos",
       "phone": "TELÉFONO",
       "phonePlaceholder": "Elige un teléfono",
       "email": "CORREO ELECTRÓNICO",
@@ -65,5 +54,8 @@
       "errorMessage2": "Por favor, revisa tus datos e inténtalo nuevamente.",
       "accept": "Aceptar"
     }
+  },
+  "socialMedia": {
+    "titulo": "Siguenos"
   }
 }

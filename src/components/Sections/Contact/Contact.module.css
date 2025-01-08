@@ -1,100 +1,70 @@
+
 .contactSection {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
+  justify-content: center; 
   text-align: center;
-  padding: 100px;
-  background-color: var(--softBg);
+  padding: 50px 20px;
+  background-color: #000000;
   position: relative;
+  min-height: 100vh; 
 }
 
 .contactSection h2 {
   font-size: 40px;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  color: linear-gradient(#16205fd5,#64e1f4d5)
 }
 
-.contactSection p {
-  font-size: 24px;
-  margin-bottom: 20px;
-  width: 54%;
-}
-
-.liquidator,
-.user {
-  background-image: linear-gradient(to right, #0ef1ff, #6100ff);
+.gradientText {
+  font-size: 40px;
+  font-weight: 500;
+  background-image: linear-gradient(to right, #16205F, #64E0F4);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
-}
-
-.user {
-  background-image: linear-gradient(to right, #7000ff, #ff007a);
 }
 
 .contactForm {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background-color: #17184f;
+  justify-content: center; 
+  background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
-  max-width: 1000px;
+  max-width: 600px;
   width: 100%;
-  border: #414141 solid 1px;
   margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #dddddd;
 }
 
-.leftPanel {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  height: 512px;
-}
-
-.rightPanel {
-  flex: 1;
-  background-color: #414141;
-  padding: 40px;
-  padding-left: 20px;
+.formGroup {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.formHeader {
-  display: flex;
-  justify-content: start;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.formGroup,
-.term {
+  width: 100%;
   margin-bottom: 20px;
 }
 
 .formGroup label,
 .term label {
-  display: block;
-  color: #ffffff;
+  color: #000000; 
   text-align: start;
   margin-bottom: 5px;
 }
 
 .formGroup input[type="text"],
 .formGroup input[type="email"],
-.formGroup select,
 .formGroup textarea {
-  width: -webkit-fill-available;
   padding: 10px;
   border: 1px solid #dddddd;
   border-radius: 5px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+  width: 100%;
 }
 
 .formGroup input[type="text"]:focus,
@@ -105,13 +75,19 @@
   outline: none;
 }
 
-.formGroup input[type="checkbox"] {
-  margin-right: 10px;
+.formGroup textarea {
+  resize: none;
 }
 
 .term {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #000000; 
+}
+
+.term input {
+  margin-right: 10px;
 }
 
 .terms {
@@ -119,69 +95,33 @@
 }
 
 .submitButton {
-  background-color: #7e94ff;
+  background-color: #007bff;
   color: #ffffff;
   padding: 10px 20px;
   border: none;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
   transition: transform 0.1s ease, background-color 0.3s ease;
 }
 
 .submitButton:hover {
-  transform: scale(1.05);
-  transition: transform 0.9s ease, background-color 0.3s ease;
-  background-color: #6780ff;
+  background-color: #0056b3;
 }
 
 .submitButton:active {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .submitButton:disabled {
   background-color: #b1b1b1;
 }
 
-.contentModal {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  gap: 40px;
-}
-
-.modalTitle {
-  font-size: 24px;
-}
-
-.modalClose {
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: transform 0.1s ease, background-color 0.3s ease;
-  background-color: #6780ff;
-}
-
-.modalClose:hover {
-  background-color: #007bff;
-}
-
-.message {
-  width: 80%;
-  text-align: center;
-  font-size: 20px;
-}
-
 @media (max-width: 980px) {
   .contactSection {
-    padding: 50px 0;
+    display: none;
   }
-  .contactSection h2 {
+  /*.contactSection h2 {
     font-size: 36px;
   }
   .contactSection p {
@@ -191,15 +131,17 @@
 
   .contactForm {
     width: 90%;
-  }
+  }*/
 }
 
 /* Mobile */
 @media (max-width: 700px) {
   .contactSection {
-    padding: 50px 0;
+    display: none;
+    /*padding: 50px 0;*/
   }
-  .contactSection h2 {
+  
+  /*.contactSection h2 {
     font-size: 36px;
   }
   .contactSection p {
@@ -221,5 +163,5 @@
 
   .submitButton {
     background-color: #6780ff;
-  }
+  }*/
 }

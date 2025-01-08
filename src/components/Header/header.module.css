@@ -114,17 +114,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 120px;
   height: 40px;
-  border-radius: 50px;
-  background-image: linear-gradient(to right, #b92a91, #211fb1, #119b8b);
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #16205F, #64E0F4);
   color: #fff;
   text-decoration: none;
   transition: transform 0.9s ease, background-color 0.3s ease;
+  text-transform: uppercase;
 }
 
 .goApp:hover {
-  background-image: linear-gradient(to right, #ff00b7, #0400ff, #00ffe1); 
+  background-image: linear-gradient(to right, #2038d3, #0dd3f1); 
   transform: scale(1.1); 
   transition: transform 0.9s ease, background-color 0.3s ease;
 }

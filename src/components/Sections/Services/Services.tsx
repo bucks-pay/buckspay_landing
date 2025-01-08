@@ -6,40 +6,14 @@ const ServicesSection: React.FC = () => {
   return (
     <section id="services" className={styles.servicesSection}>
       <div className={styles.background}>
-        <div className={styles.circle} id={styles.circle3}></div>
+        <video autoPlay loop muted className={styles.videoBackground} preload="auto">
+          <source src="/23.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div className={styles.content}>
-        <h2>
-          {t("servicesSection.title-1")}{" "}
-          <span className={styles.gradient}>
-            {t("servicesSection.increase")}
-          </span>{" "}
-          {t("servicesSection.title-2")}
-        </h2>
+        <h2>{t("servicesSection.title-1")}</h2>
         <p>{t("servicesSection.subtitle")}</p>
-        {/* <button className={styles.viewServicesButton}>{t("servicesSection.contact")}</button> */}
-      </div>
-      <div className={styles.servicesContainer}>
-        <span className={styles.servicesContainerTitle}>
-          {t("servicesSection.price")}
-        </span>
-        <Image
-          className={`${styles.img} ${styles.imgHorizontal}`}
-          src={"/background/Services.png"}
-          alt=""
-          width={860}
-          height={570}
-        />
-        <Image
-          className={`${styles.img} ${styles.imgVertical}`}
-          src={"/background/Services-vertical.png"}
-          alt=""
-          width={800}
-          height={970}
-        />
-        <span className={styles.servicesContainerSubtitle}>
-          {t("servicesSection.find")}
-        </span>
       </div>
     </section>
   );

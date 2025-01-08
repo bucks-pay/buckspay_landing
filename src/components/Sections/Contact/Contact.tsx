@@ -28,6 +28,7 @@ const ContactSection: React.FC<IContactSection> = ({
     typeIdentification: typeIdentification[0],
     identification: "",
     fullName: "",
+    lastName: "",
     phone: "",
     email: "",
     message: "",
@@ -44,6 +45,7 @@ const ContactSection: React.FC<IContactSection> = ({
       typeIdentification: form.typeIdentification,
       identification: form.identification,
       name: form.fullName,
+      lastName: form.lastName,
       phone: form.phone,
       email: form.email,
       message: form.message,
@@ -122,70 +124,16 @@ const ContactSection: React.FC<IContactSection> = ({
   return (
     <>
       <section id="contact" className={styles.contactSection}>
-        <h2>{t("contactSection.title")}</h2>
-        <p>
-          {t("contactSection.titleFirst")}
-          <span className={styles.liquidator}>
-            {" "}
-            {t("contactSection.liquidator")}{" "}
-          </span>
-          {t("contactSection.or")}{" "}
-          <span className={styles.user}>{t("contactSection.user")} </span>
-          {t("contactSection.titleSecond")}
-        </p>
         <form
           onSubmit={handleSubmit}
           method="post"
           className={styles.contactForm}
         >
-          <div className={styles.leftPanel}>
-            <div className={styles.iconContainer}>
-              <Image
-                src="/contact-us.png"
-                alt="ContactUs"
-                width={300}
-                height={300}
-              />
-            </div>
-          </div>
+
           <div className={styles.rightPanel}>
+          <h2 className={styles.gradientText}>{t("contactSection.title")}</h2>
             <div className={styles.formHeader}></div>
-            <div className={styles.formGroup}>
-              <label htmlFor="country">
-                {t("contactSection.form.country")}
-              </label>
-              <select onChange={handleInputChange} value={form.country} name="country">
-                {country.map((el: string) => (
-                  <option key={el} value={el}>
-                    {el}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="typeIdentification">
-                {t("contactSection.form.typeIdentification")}
-              </label>
-              <select onChange={handleInputChange} value={form.typeIdentification} name="typeIdentification">
-                {typeIdentification.map((el: string) => (
-                  <option key={el} value={el}>
-                    {el}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="identification">{t("contactSection.form.identification")}</label>
-              <input
-                type="text"
-                id="identification"
-                required
-                name="identification"
-                placeholder={t("contactSection.form.identificationPlaceholder")}
-                onChange={handleInputChange}
-                value={form.identification}
-              />
-            </div>
+
             <div className={styles.formGroup}>
               <label htmlFor="fullName">
                 {t("contactSection.form.fullName")}
@@ -200,6 +148,18 @@ const ContactSection: React.FC<IContactSection> = ({
                 value={form.fullName}
               />
             </div>
+            <div className={styles.formGroup}>
+            <label htmlFor="lastName">{t("contactSection.form.lastName")}</label>
+            <input
+              type="text"
+              id="lastName"
+              required
+              name="lastName"
+              placeholder={t("contactSection.form.lastNamePlaceholder")}
+              onChange={handleInputChange}
+              value={form.lastName}
+            />
+          </div>
             <div className={styles.formGroup}>
               <label htmlFor="phone">{t("contactSection.form.phone")}</label>
               <input
