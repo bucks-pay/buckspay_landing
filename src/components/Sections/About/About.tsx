@@ -5,20 +5,17 @@ const AboutSection: React.FC = () => {
   const { t } = useTranslation(["landing"]);
   return (
     <section id="about" className={styles.aboutUsSection}>
-      <div className={`${styles.bubble} ${styles.bubble1}`}></div>
-      <div className={`${styles.bubble} ${styles.bubble2}`}></div>
-      <div className={`${styles.bubble} ${styles.bubble3}`}></div>
-      <div className={`${styles.bubble} ${styles.bubble4}`}></div>
+     <div className={styles.animatedBackground}></div>
       <h2 className={styles.tittle}>{t("aboutSection.title")}</h2>
       <p>{t("aboutSection.description")}</p>
       <div className={styles.imagesContainer}>
         <div className={styles.imageBox}>
           <Image
             className={styles.img}
-            src="/background/opcion-3.jpg"
+            src="/background/Seguridad.png"
             alt="Security"
-            width={280}
-            height={490}
+            width={127.5}
+            height={150}
           />
           <span className={styles.imageLabel}>
             {t("aboutSection.imageDescriptions.security")}
@@ -27,10 +24,10 @@ const AboutSection: React.FC = () => {
         <div className={styles.imageBox}>
           <Image
             className={styles.img}
-            src="/background/Speed.png"
+            src="/background/Velocidad.png"
             alt="Speed"
-            width={280}
-            height={490}
+            width={150}
+            height={150}
           />
           <span className={styles.imageLabel}>
             {t("aboutSection.imageDescriptions.speed")}
@@ -39,10 +36,10 @@ const AboutSection: React.FC = () => {
         <div className={styles.imageBox}>
           <Image
             className={styles.img}
-            src="/background/Efficiency.png"
+            src="/background/Eficiencia.png"
             alt="Efficiency"
-            width={280}
-            height={490}
+            width={150}
+            height={150}
           />
           <span className={styles.imageLabel}>
             {t("aboutSection.imageDescriptions.efficiency")}

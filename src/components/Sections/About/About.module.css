@@ -3,8 +3,33 @@
   padding: 50px 20px;
   position: relative;
   padding-top: 100px;
-  background-color: var(--softBg);
   z-index: 1;
+
+}
+
+.animatedBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #16205fd5,#64e1f4d5);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -1; /* Ensure the background is behind other content */
+
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .aboutUsSection h2 {
@@ -25,9 +50,11 @@
 .imagesContainer {
   display: flex;
   justify-content: center;
-  gap: 45px;
+  gap: 40px;
   position: relative;
   z-index: 1;
+  flex-wrap: wrap; /* Allows wrapping of items */
+  
 }
 
 .imageBox {
@@ -35,140 +62,27 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .img {
-  border-radius: 20px;
   display: block;
+  margin: 30px;
 }
 
+
 .imageLabel {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 10px;
   color: #fff;
   padding: 5px 10px;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
 }
 
-.bubble {
-  --float-distance: -20px;
-  --float-speed: 3000ms;
-  --size: 200px;
-  width: var(--size);
-  height: var(--size);
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 30vh;
-  backdrop-filter: blur(5px);
-  box-shadow: inset 0 0.13vmin var(--bubble1Variant1),
-    inset 0 0.18vmin var(--bubble1Variant2),
-    inset 0.1vmin 0.1vmin var(--bubble1Variant3);
-  animation: floating var(--float-speed) ease-in-out infinite;
-  left: 85%;
-  top: 30%;
-  z-index: -1;
-}
-
-.bubble2 {
-  box-shadow: inset 0 0.13vmin var(--bubble2Variant1),
-    inset 0 0.18vmin var(--bubble2Variant2),
-    inset 0.1vmin 0.1vmin var(--bubble2Variant3);
-  left: 5%;
-  top: 30%;
-  --size: 100px;
-  width: var(--size);
-  height: var(--size);
-}
-
-.bubble3 {
-  box-shadow: inset 0 0.13vmin var(--bubble3Variant1),
-    inset 0 0.18vmin var(--bubble3Variant2),
-    inset 0.1vmin 0.1vmin var(--bubble3Variant3);
-  left: 10%;
-  top: 60%;
-  --size: 200px;
-  width: var(--size);
-  height: var(--size);
-}
-
-.bubble4 {
-  box-shadow: inset 0 0.13vmin var(--bubble4Variant1),
-    inset 0 0.18vmin var(--bubble4Variant2),
-    inset 0.1vmin 0.1vmin var(--bubble4Variant3);
-  left: 80%;
-  top: 70%;
-  --size: 100px;
-  width: var(--size);
-  height: var(--size);
-}
-
-.bubble::before,
-.bubble::after {
-  content: "";
-  position: absolute;
-  border-radius: inherit;
-}
-
-.bubble::before {
-  inset: 0;
-  backdrop-filter: blur(12px);
-  background-image: conic-gradient(
-    from -25 deg at 80% 20%,
-    transparent 85%,
-    rgba(255, 255, 255, 0.7) 94%,
-    transparent 94%
-  );
-  filter: blur(4px);
-}
-
-.bubble::after {
-  inset: -3px;
-  background: rgba(var(--bg--body-rgb), 0.2);
-  backdrop-filter: blur(3px);
-  z-index: -1;
-}
-
-@keyframes floating {
-  0%,
-  100% {
-    translate: 0;
-  }
-  50% {
-    translate: 0 var(--float-distance, -10px);
-  }
-}
-
-/* Bubbles 1328px*/
-
-@media (min-width: 1328px) {
-  .bubble2 {
-    left: 5%;
-    top: 40%;
-    --size: 100px;
-  }
-
-  .bubble3 {
-    left: 2%;
-    top: 70%;
-    --size: 150px;
-  }
-
-  .bubble4 {
-    left: 88%;
-    top: 70%;
-    --size: 100px;
-  }
-
-  .bubble1 {
-    left: 88%;
-    top: 40%;
-    --size: 150px;
-  }
-}
 
 /* Tablet */
 @media (max-width: 980px) {
@@ -194,14 +108,17 @@
     gap: 30px;
   }
 
-  .img {
-    border-radius: 20px;
-    width: 150px;
-    height: 250px;
+
+
+  .imageBox {
+    width: 45%; /* Adjust width for better layout on tablets */
+    margin: 0 auto;
+    justify-content: center;
   }
 
+
   .imageLabel {
-    font-size: 22px;
+    font-size: 26px;
   }
 
   .bubble {
@@ -217,6 +134,12 @@
     background-color: var(--softBg);
   }
 
+  .img {
+    margin: 0px;
+    height: 100px;
+    width: 85px;
+  }
+
   .aboutUsSection h2 {
     font-size: 36px;
   }
@@ -229,17 +152,16 @@
     gap: 30px;
   }
 
-  .img {
-    width: 110px;
-    height: 235px;
+
+  .imageBox {
+    width: 80%; 
+    margin: 0 auto;
   }
 
+
   .imageLabel {
-    font-size: 18px;
+    font-size: 24px;
     bottom: 5px;
   }
 
-  .bubble {
-    display: none;
-  }
 }

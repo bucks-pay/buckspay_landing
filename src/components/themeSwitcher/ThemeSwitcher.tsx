@@ -13,7 +13,7 @@ const ThemeToggle = () => {
 
     const { theme, toggle } = context;
 
-    const icon = theme === "dark"
+    /*const icon = theme === "dark"
         ? <Image className={styles.icon} src="/sun.svg" alt="sun.svg" width={30} height={30} />
         : <Image className={styles.icon} src="/moon.svg" alt="moon.svg" width={30} height={30} />
 
@@ -21,7 +21,7 @@ const ThemeToggle = () => {
         <button className={styles.container} onClick={toggle}>
             {icon}
         </button>
-    );
+    );*/
 };
 
 export default ThemeToggle;

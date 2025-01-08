@@ -27,18 +27,11 @@
   },
   "contactSection": {
     "title": "Contáctanos",
-    "titleFirst": "Sé parte de nosotros como",
-    "liquidator": "liquidador",
-    "or": "o",
-    "user": "usuario",
-    "titleSecond": " y recibe información adicional sobre nuestros servicios.",
     "form": {
-      "country": "PAÍS",
-      "typeIdentification": "TIPO DE IDENTIFICACIÓN",
-      "identification": "IDENTIFICACIÓN",
-      "identificationPlaceholder": "Ingresa tu número de identificación",
-      "fullName": "NOMBRE COMPLETO",
+      "fullName": "NOMBRE",
       "fullNamePlaceholder": "Ingresa tu nombre completo",
+      "lastName":"APELLIDOS",
+      "lastNamePlaceholder": "Ingresa tus apellidos",
       "phone": "TELÉFONO",
       "phonePlaceholder": "Elige un teléfono",
       "email": "CORREO ELECTRÓNICO",
@@ -61,5 +54,8 @@
       "errorMessage2": "Por favor, revisa tus datos e inténtalo nuevamente.",
       "accept": "Aceptar"
     }
+  },
+  "socialMedia": {
+    "titulo": "Siguenos"
   }
 }

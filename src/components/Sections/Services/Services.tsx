@@ -6,8 +6,8 @@ const ServicesSection: React.FC = () => {
   return (
     <section id="services" className={styles.servicesSection}>
       <div className={styles.background}>
-        <video autoPlay loop muted className={styles.videoBackground}>
-          <source src="/World 2.mp4" type="video/mp4" />
+        <video autoPlay loop muted className={styles.videoBackground} preload="auto">
+          <source src="/23.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

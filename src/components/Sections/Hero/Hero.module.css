@@ -155,40 +155,20 @@
   margin-top: 80px;
 }
 
-@media (width < 1024px) {
-  .content h1 {
-    text-align: center;
-  }
-}
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 1s ease-in-out forwards;
-}
-
+/* Media Queries para responsive design */
 @media (max-width: 1024px) {
-  .buttonInfoContainer {
-    margin-top: 0;
-  }
-
   .heroSection {
     height: auto;
     padding: 20px 0;
+    border-bottom-left-radius: 25%;
   }
   .content {
     right: 0;
     text-align: center;
     margin-top: 100px;
+    align-items: center;
+    margin-left: 0px;
   }
   .content h1 {
     font-size: 36px;
@@ -197,73 +177,47 @@
     align-items: center;
     flex-direction: column;
   }
-
   .paragraphContainer {
     flex-direction: column;
     align-items: center;
     margin-left: 0;
   }
-
   .paragraphContainer span {
     width: 10%;
     height: 0.1px;
   }
-
   .paragraphContainer p {
     width: 60%;
     text-align: center;
     font-size: 14px;
   }
-
   .buttonInfoContainer {
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
   }
   .goApp {
-    width: 25%;
+    width: 40%;
     margin-bottom: 20px;
     font-size: 18px;
   }
-
   .infoBox {
     position: static;
     width: 100%;
     text-align: center;
     margin-top: 20px;
   }
-
   .cryptoTable {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
     text-align: justify;
   }
-
   .cryptoInfo {
     justify-content: flex-start;
   }
-
-  @keyframes one {
-    0% {
-      right: 0rem;
-      top: 0rem;
-    }
-    25% {
-      right: 0rem;
-      top: 5rem;
-    }
-    50% {
-      right: 2rem;
-      top: 8rem;
-    }
-    75% {
-      right: 5rem;
-      top: 10rem;
-    }
-    100% {
-      right: 0rem;
-      top: 0rem;
-    }
+  .vectors {
+    display: none;
   }
 }
 
@@ -272,95 +226,54 @@
   .heroSection {
     height: auto;
     padding: 20px 0;
+    border-bottom-left-radius: 25%;
   }
-
   .content {
     right: 0;
     top: 100px;
     text-align: center;
+    align-items: center;
+    margin-left: 0px;
   }
-
   .content h1 {
     font-size: 25px;
   }
-
   .paragraphContainer {
     flex-direction: column;
     align-items: center;
     margin-left: 0;
     margin-top: 20px;
   }
-
   .paragraphContainer span {
     width: 10%;
     height: 0.1px;
   }
-
   .paragraphContainer p {
     width: 75%;
     text-align: center;
     font-size: 17px;
   }
-
   .buttonInfoContainer {
     flex-direction: column;
     align-items: center;
     font-size: 12px;
     margin-top: 0px;
   }
-
   .goApp {
-    width: 40%;
+    width: 70%;
     margin-bottom: 20px;
     font-size: 14px;
   }
-
   .infoBox {
     position: static;
     width: 100%;
     text-align: center;
     margin-top: 20px;
   }
-
   .cryptoInfo {
     justify-content: flex-start;
   }
-
   .cryptoTable th {
     font-size: 14px;
-  }
-
-  #circle,
-  #circle2,
-  #circle3 {
-    animation: static;
-  }
-
-  @keyframes one {
-    0% {
-      right: 0rem;
-      top: 0rem;
-    }
-    25% {
-      right: 0rem;
-      top: 7rem;
-    }
-    50% {
-      right: 2rem;
-      top: 10rem;
-    }
-    75% {
-      right: 5rem;
-      top: 12rem;
-    }
-    100% {
-      right: 0rem;
-      top: 0rem;
-    }
-  }
-
-  #circle2,
-  #circle3 {
-    display: none;
   }
 }

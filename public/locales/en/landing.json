@@ -1,8 +1,9 @@
 {
   "heroSection": {
-    "title": "The Future Of Transactions",
-    "start": "¡Starts Now!",
-    "paragraph": "With BucksPay, manage your money easier. You can pay with your crypto anywhere with just a few clicks.",
+    "title": "The simplest way to",
+    "start": "pay with",
+    "recolor": "cryptocurrencies",
+    "paragraph": "With BucksPay, make everyday cryptocurrency payments easily, without banks or complicated conversions",
     "goApp": "Go To App",
     "infoBox": {
       "symbol": "Symbol",
@@ -13,13 +14,8 @@
   },
 
   "servicesSection": {
-    "title-1": "Become a liquidity provider, facilitating local currency payments",
-    "increase": "(on-ramp)",
-    "title-2": "and offering liquidity to users worldwide.",
-    "subtitle": "Earn profits while enhancing decentralized financial accessibility in the global market.",
-    "contact": "Contact Us",
-    "find": "Find the best price with our nationally qualified liquidators.",
-    "price": "Find The Perfect Price."
+    "title-1": "Designed so anyone, anywhere can pay with confidence.",
+    "subtitle": "Simpler payments, for a more connected world."
   },
 
   "aboutSection": {
@@ -33,18 +29,11 @@
   },
   "contactSection": {
     "title": "Contact Us",
-    "titleFirst": "Be part of us as a",
-    "liquidator": "liquidator",
-    "or": "or",
-    "user": "user",
-    "titleSecond": "and receive additional information about our services.",
     "form": {
-      "country": "COUNTRY",
-      "typeIdentification": "TYPE OF IDENTIFICATION",
-      "identification": "IDENTIFICATION",
-      "identificationPlaceholder": "Enter your ID number",
       "fullName": "FULL NAME",
       "fullNamePlaceholder": "Enter your full name",
+      "lastName":"LAST NAME",
+      "lastNamePlaceholder": "Ingresa tus apellidos",
       "phone": "PHONE",
       "phonePlaceholder": "Choose a phone",
       "email": "E-MAIL",
@@ -67,5 +56,8 @@
       "errorMessage2": "Please check your details and try again.",
       "accept": "Accept"
     }
+  },
+  "socialMedia": {
+    "titulo": "Follow Us"
   }
 }
