@@ -21,6 +21,7 @@
   flex-direction: column;
   align-items: flex-start;
   margin-left: 150px;
+  
 }
 
 .content h1 {
@@ -73,94 +74,16 @@
   padding-left: 15px;
 }
 
-.goApp {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--softTextColor);
-  /* color: var(--softBg); */
-  border: none;
-  cursor: pointer;
-  width: 205px;
-  height: 50px;
-  border-radius: 20px;
-  font-size: 22px;
-  transition: transform 0.1s ease, background-color 0.3s ease;
-}
 
-.goApp:hover {
-  background-image: linear-gradient(to right, #ff17be, #1f1bef, #0aefd4);
-  color: var(--softTextColor);
-  transform: scale(1.05);
-  transition: transform 0.9s ease, background-color 0.3s ease;
-}
-
-.goApp:active {
-  transform: scale(1.1);
-}
-
-.infoBox {
-  padding: 10px;
-  width: 555px;
-  color: var(--softTextColor);
-}
-
-.cryptoTable {
-  background-color: var(--tableColor);
-  width: 100%;
-  /*border: 1px solid var(--softTextColor);*/
-  border-radius: 20px;
-  margin: 10px 0;
-}
-
-.cryptoTable th,
-.cryptoTable td {
-  padding: 10px;
-  text-align: left;
-}
-
-.cryptoTable th {
-  border-bottom: 1px solid var(--softTextColor);
-  color: var(--softTextColor);
-  font-size: 18px;
-}
-
-.cryptoTable tbody tr:hover {
-  color: var(--softTextColor);
-  cursor: pointer;
-}
-
-.cryptoTable td {
-  font-size: 16px;
-  color: var(--softTextColor);
-}
-
-.cryptoInfo {
-  display: flex;
-  align-items: center;
-}
-
-.cryptoInfo img {
-  margin-right: 8px;
-}
-
-.content_main_table {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 0 2rem;
-}
-
-.buttonInfoContainer {
-  margin-top: 80px;
-}
 
 /* Media Queries para responsive design */
+
+/*Tablet*/
+
 @media (max-width: 1024px) {
   .heroSection {
     height: auto;
     padding: 20px 0;
-    border-bottom-left-radius: 25%;
   }
   .content {
     right: 0;
@@ -172,10 +95,7 @@
   .content h1 {
     font-size: 36px;
   }
-  .content_main_table {
-    align-items: center;
-    flex-direction: column;
-  }
+
   .paragraphContainer {
     flex-direction: column;
     align-items: center;
@@ -190,42 +110,26 @@
     text-align: center;
     font-size: 14px;
   }
-  .buttonInfoContainer {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-  }
-  .goApp {
-    width: 40%;
-    margin-bottom: 20px;
-    font-size: 18px;
-  }
-  .infoBox {
-    position: static;
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-  }
-  .cryptoTable {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    text-align: justify;
-  }
-  .cryptoInfo {
-    justify-content: flex-start;
-  }
+
   .vectors {
-    display: none;
+    display: flex;
+    height: auto;
+    margin-top: 80px;
   }
+
+  .vector1,
+  .vector2 {
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+  }
+  
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .heroSection {
     height: auto;
     padding: 20px 0;
-    border-bottom-left-radius: 25%;
   }
   .content {
     right: 0;
@@ -252,27 +156,10 @@
     text-align: center;
     font-size: 17px;
   }
-  .buttonInfoContainer {
-    flex-direction: column;
-    align-items: center;
-    font-size: 12px;
-    margin-top: 0px;
+
+  .vectors {
+    display: none;
   }
-  .goApp {
-    width: 70%;
-    margin-bottom: 20px;
-    font-size: 14px;
-  }
-  .infoBox {
-    position: static;
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-  }
-  .cryptoInfo {
-    justify-content: flex-start;
-  }
-  .cryptoTable th {
-    font-size: 14px;
-  }
+
+
 }

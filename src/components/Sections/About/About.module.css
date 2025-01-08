@@ -85,7 +85,6 @@
   .aboutUsSection {
     padding: 50px 20px;
     position: relative;
-    background-color: var(--softBg);
   }
 
   .aboutUsSection h2 {
@@ -94,10 +93,6 @@
 
   .aboutUsSection p {
     font-size: 20px;
-  }
-
-  .bubble1 {
-    left: 70%;
   }
 
   .imagesContainer {
@@ -114,9 +109,6 @@
     font-size: 26px;
   }
 
-  .bubble {
-    display: none;
-  }
 }
 
 /* Mobile */
@@ -124,7 +116,7 @@
   .aboutUsSection {
     padding: 50px 20px;
     position: relative;
-    background-color: var(--softBg);
+    background-color: black;
   }
 
   .img {
