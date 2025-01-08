@@ -42,7 +42,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: black;
 }
 
 .menuList {
@@ -151,6 +150,7 @@
     flex-direction: column;
     align-items: center;
     display: none;
+    background-color: black;
   }
 
   .container {
