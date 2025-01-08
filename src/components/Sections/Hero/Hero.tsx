@@ -53,50 +53,6 @@ const HeroSection: React.FC = () => {
             <span></span>
             <p>{t("heroSection.paragraph")}</p>
           </div>
-          {cryptoData.length > 0 && (
-            <div className={`${styles.buttonInfoContainer} fade-in`}>
-              {/* <button className={styles.goApp}>{t("heroSection.goApp")}</button> */}
-              <div className={styles.infoBox}>
-                <table className={styles.cryptoTable}>
-                  <thead className={styles.contentHead}>
-                    <tr>
-                      <th>{t("heroSection.infoBox.name")}</th>
-                      <th>{t("heroSection.infoBox.price")}</th>
-                      <th>{t("heroSection.infoBox.volumeChange24h")}</th>
-                    </tr>
-                  </thead>
-                  <tbody className={styles.contentBody}>
-                    {cryptoData.map((crypto, index) => (
-                      <tr key={index}>
-                        <td>
-                          <div className={styles.cryptoInfo}>
-                            <Image
-                              src={`/icons/crypto/${crypto.symbol}.png`}
-                              alt={crypto.symbol}
-                              width={20}
-                              height={20}
-                            />
-                            <span>
-                              {crypto.symbol} {crypto.name}
-                            </span>
-                          </div>
-                        </td>
-                        <td>${formatPrice(crypto.price_usd)}</td>
-                        <td
-                          style={{
-                            color:
-                              crypto.volume_change_24h < 0 ? "red" : "green",
-                          }}
-                        >
-                          {crypto.volume_change_24h?.toFixed(2)}%
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
         </div>
       </div>
       <div className={styles.vectors}>
