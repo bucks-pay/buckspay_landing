@@ -13,7 +13,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(270deg, #16205fd5, #64e1f4d5);
+  background: linear-gradient(270deg, #16205fd5, #0192a8d5);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
   z-index: -1; /* Ensure the background is behind other content */
