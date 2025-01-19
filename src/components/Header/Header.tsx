@@ -11,9 +11,11 @@ export const Header = () => {
   const { t } = useTranslation(["header"]);
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
   return (
     <header className={styles.container}>
       <Link href={"/"} className={styles.logo}>
@@ -24,12 +26,12 @@ export const Header = () => {
         {pathname === "/" && (
           <ul className={styles.menuList}>
             <li>
-              <Link className={styles.link} href={"#services"}>
+              <Link className={styles.link} href={"#services"} onClick={() => { setMenuOpen(false) }} >
                 {t("services")}
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href={"#about"}>
+              <Link className={styles.link} href={"#about"} onClick={() => { setMenuOpen(false) }}>
                 {t("about")}
               </Link>
             </li>
