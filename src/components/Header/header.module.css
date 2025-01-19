@@ -66,7 +66,7 @@
 
 .link:hover {
   background-color: #f1050500;
-  font-size: 1.2em;
+  font-size: 20px;
 }
 
 .link:active {
@@ -157,50 +157,50 @@
     gap: 100px;
   }
 
+  .link {
+    font-size: 30px;
+  }
+
+  .link:hover {
+    font-size: 35px;
+  }
+
   .link::before {
     height: 0px;
   }
 
   .menuOpen {
     display: flex;
+    height: 100vh;
+    justify-content: flex-start;
   }
 
   .menuList,
   .botones {
     display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
   }
 
   .menuOpen .menuList,
   .menuOpen .botones {
     display: flex;
+    padding: 0;
   }
 
   .menuOpen {
     position: absolute;
     top: 60px;
     left: 0;
-    width: 94.5%;
-    /* background-color: var(--softBg); */
-    padding: 20px;
+    width: 100%;
     z-index: 1000;
+    padding: 0;
+    padding-top: 50px;
   }
 }
 
 @media (max-width: 480px) {
-  .link {
-    font-size: 14px;
-  }
-
   .container {
     gap: 0px;
-  }
-
-  .menuOpen {
-    padding: 0;
-    width: 100%;
   }
 
   .button {
