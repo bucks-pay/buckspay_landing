@@ -6,34 +6,31 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="flex justify-between items-start w-full bg-black text-white px-40 py-8">
-      {/* Left Section */}
-      <div className="flex flex-col items-start">
-        {/* Text Above Logo */}
-        <div className="mb-4">
-          <p className="text-lg font-semibold">Pay safely</p>
-          <p className="text-lg font-semibold">no matter where u are</p>
+    <footer className="font-display flex flex-col md:flex-row justify-between items-center md:items-start w-full bg-[#08070E] text-white p-6 md:px-8 lg:px-20 xl:px-40 py-8 border-t border-white/10">
+      <div className="flex flex-col items-center md:items-start mb-8 md:mb-0">
+        <div className="text-center md:text-left mb-4">
+          <p className="text-base md:text-lg">Pay safely</p>
+          <p className="text-base md:text-lg">no matter where u are</p>
         </div>
-        {/* Logo */}
         <Image
           src="/logos/newBPlogo.png"
           alt="New Logo"
           width={190}
           height={50}
-          className="object-contain"
+          className="object-contain w-[150px] md:w-[190px]"
+          priority
         />
       </div>
 
-      {/* Right Section */}
-      <div className="flex flex-col items-start">
-        <h3 className="text-xl font-bold mb-4">Social</h3>
-        <ul className="space-y-2">
+      <div className="flex flex-col items-center md:items-start">
+        <h3 className="text-lg md:text-xl font-bold mb-4">Social</h3>
+        <ul className="space-y-2 text-center md:text-left">
           <li>
             <Link
               href="https://x.com/buckspay_"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300 transition-colors"
+              className="hover:text-gray-300 transition-colors inline-block"
             >
               Twitter (X)
             </Link>
@@ -43,7 +40,7 @@ export const Footer = () => {
               href="https://www.instagram.com/buckspay_"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-pink-500 transition-colors"
+              className="hover:text-pink-500 transition-colors inline-block"
             >
               Instagram
             </Link>
@@ -53,7 +50,7 @@ export const Footer = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-500 transition-colors"
+              className="hover:text-blue-500 transition-colors inline-block"
             >
               LinkedIn
             </Link>
