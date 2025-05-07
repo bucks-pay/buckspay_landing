@@ -1,19 +1,20 @@
-import Image from "next/image";
-import styles from "./Services.module.css";
 import { useTranslation } from "react-i18next";
+
 const ServicesSection: React.FC = () => {
   const { t } = useTranslation(["landing"]);
+
   return (
-    <section id="services" className={styles.servicesSection}>
-      <div className={styles.background}>
-        <video autoPlay loop muted className={styles.videoBackground} preload="auto">
-          <source src="/23.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div className={styles.content}>
-        <h2>{t("servicesSection.title-1")}</h2>
-        <p>{t("servicesSection.subtitle")}</p>
+    <section
+      id="services"
+      className="relative flex items-center justify-start w-full min-h-[60vh] bg-[#08070E] p-30"
+    >
+      <div className="relative z-10 max-w-3xl text-center text-white ml-40">
+        <h2 className="font-sans text-3xl font-semibold leading-tight lg:text-4xl">
+          {t("servicesSection.title-1")}
+        </h2>
+        <p className="mt-4 text-base lg:text-lg">
+          {t("servicesSection.subtitle")}
+        </p>
       </div>
     </section>
   );
