@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const HowWorksSection: React.FC = () => {
   const steps = [
@@ -23,24 +26,54 @@ const HowWorksSection: React.FC = () => {
     }
   ];
 
-  return (
-    <section
-      id="how-works"
-      className="font-display relative flex items-start justify-start w-full min-h-screen bg-[#08070E] text-white p-4 md:p-8 lg:px-20 xl:px-80 py-16"
-    >
-      <div className="max-w-6xl w-full">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-center md:text-left">
-          How It Works
-        </h2>
-        
-        <p className="text-base md:text-lg mb-8 md:mb-12 text-center md:text-left">
-          Start using Buckspay in just a few taps — no banks, no hassle, no limits.
-        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 }, 
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }, 
+  };
+
+  const stepVariants = {
+    hidden: { opacity: 0, y: 50 }, 
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.3 } }, 
+  };
+
+  return (
+    <motion.section
+      id="how-works"
+      className="font-display relative flex flex-col items-center justify-center w-full min-h-[50vh] bg-[#08070E] text-white p-4 md:p-6 lg:px-16 xl:px-40 py-12"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }} 
+    >
+      <motion.div
+        className="max-w-5xl w-full"
+        variants={textVariants} 
+      >
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center"
+          variants={textVariants}
+        >
+          How It Works
+        </motion.h2>
+        
+        <motion.p
+          className="text-base md:text-lg mb-8 md:mb-12 text-center"
+          variants={textVariants}
+        >
+          Start using Buckspay in just a few taps — no banks, no hassle, no limits.
+        </motion.p>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10"
+          variants={stepVariants} 
+        >
           {steps.map((step, index) => (
-            <div key={index} className="relative group">
-              <div className="relative aspect-square w-full mb-4 md:mb-6 overflow-hidden rounded-lg">
+            <motion.div
+              key={index}
+              className="relative group"
+              variants={stepVariants} 
+            >
+              <div className="relative aspect-square w-full mb-3 md:mb-4 overflow-hidden rounded-lg">
                 <Image 
                   src={step.image} 
                   alt={step.title} 
@@ -51,57 +84,26 @@ const HowWorksSection: React.FC = () => {
                 />
 
                 <div className="absolute inset-0">
-                  <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/2 to-black"></div>
-                    <div className="absolute inset-0 bg-gradient-to-tr from-black via-transparent to-white/2"></div>
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.3)_100%)]"></div>
-                  </div>
-
-                  <div className="absolute inset-0">
-                    <div className="absolute top-0 left-0 w-1/2 h-1/2">
-                      <div className="absolute inset-0 bg-gradient-to-br from-black via-black/10 to-transparent"></div>
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
-                    </div>
-                    
-                    <div className="absolute top-0 right-0 w-1/2 h-1/2">
-                      <div className="absolute inset-0 bg-gradient-to-bl from-black via-black/10 to-transparent"></div>
-                      <div className="absolute inset-0 bg-gradient-to-bl from-white/5 to-transparent"></div>
-                    </div>
-                    
-                    <div className="absolute bottom-0 left-0 w-1/2 h-1/2">
-                      <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/10 to-transparent"></div>
-                      <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
-                    </div>
-                    
-                    <div className="absolute bottom-0 right-0 w-1/2 h-1/2">
-                      <div className="absolute inset-0 bg-gradient-to-tl from-black via-black/10 to-transparent"></div>
-                      <div className="absolute inset-0 bg-gradient-to-tl from-white/5 to-transparent"></div>
-                    </div>
-                  </div>
-
-                  <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.2)_70%)]"></div>
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)]"></div>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/2 to-black"></div>
                 </div>
 
-                <div className="absolute top-4 md:top-6 left-4 md:left-6 z-20">
-                  <div className="relative flex items-center justify-center w-12 h-12 md:w-16 md:h-16">
+                <div className="absolute top-3 md:top-4 left-3 md:left-4 z-20">
+                  <div className="relative flex items-center justify-center w-10 h-10 md:w-12 md:h-12">
                     <div className="relative z-10 flex items-center justify-center w-full h-full rounded-full bg-[#090812] border border-white/20">
                       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 to-transparent opacity-50"></div>
-                      <span className="text-xl md:text-2xl font-bold text-white relative z-10">{step.number}</span>
+                      <span className="text-lg md:text-xl font-bold text-white relative z-10">{step.number}</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 text-center md:text-left">{step.title}</h3>
-              <p className="text-base md:text-lg text-gray-300 text-center md:text-left">{step.description}</p>
-            </div>
+              <h3 className="text-lg md:text-xl font-semibold mb-1 text-center md:text-left">{step.title}</h3>
+              <p className="text-sm md:text-base text-gray-300 text-center md:text-left">{step.description}</p>
+            </motion.div>
           ))}
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 

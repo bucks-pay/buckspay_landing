@@ -6,6 +6,7 @@ import ThemeProvider from "@/providers/ThemeProvider";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 
+
 export const metadata: Metadata = {
   title: "BucksPay",
   description: "Easy Pay",
