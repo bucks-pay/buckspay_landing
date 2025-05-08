@@ -1,102 +1,98 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react'; // Asegúrate de importar useState
-import Image from 'next/image';
-import styles from './footer.module.css';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export const Footer = () => {
-    const { t } = useTranslation(["landing"]);
-    const [companyMenuOpen, setCompanyMenuOpen] = useState(false);
-    const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
-    const [howToStartMenuOpen, setHowToStartMenuOpen] = useState(false);
 
-    return (
-        <footer className={styles.container}>
-            <div className={styles.leftSide}>
-                <Link href={"/"} className={`${styles.logo} ${styles.linkLogo}`}>
-                    <Image className={styles.fullLogo} src={"/logos/buckspay-text-light.png"} alt='logo' width={190} height={50} />
-                </Link>
-                <div className={styles.socialMedia}>
-                    <span>{t("socialMedia.titulo")}</span>
-                    <div className={styles.socialIcons}>
-                        <Link href={"https://x.com/buckspay_"} className={styles.logo} target="_blank" rel="noopener noreferrer">
-                            <Image src={"/social/x.png"} alt="X logo" width={25} height={25} />
-                        </Link>
-                        <Link href={"https://www.instagram.com/buckspay_"} className={styles.logo} target="_blank" rel="noopener noreferrer">
-                            <Image src={"/social/instagram.png"} alt="Instagram logo" width={25} height={25} />
-                        </Link>
-                        <Link href={"https://warpcast.com/buckspay"} className={styles.logo} target="_blank" rel="noopener noreferrer">
-                            <Image src={"/social/warpcast.png"} alt="Warpcast logo" width={25} height={25} />
-                        </Link>
-                        <Link href={"https://t.me/buckspay"} className={styles.logo} target="_blank" rel="noopener noreferrer">
-                            <Image src={"/social/telegram.png"} alt="Telegram logo" width={25} height={25} />
-                        </Link> 
-                    </div>
-                </div>
-                <p className={styles.description}>
-                    Expertly trained, battle-tested, elite <br />software developers on demand
-                </p>
-                <div className={styles.contactInfo}>
-                    <div className={styles.contactItem}>
-                        <Image src={"/icons/Phone.png"} alt="Phone" width={25} height={25} />
-                        <span>+94 713249222</span>
-                    </div>
-                    <div className={styles.contactItem}>
-                        <Image src={"/icons/Email.png"} alt="Email" width={25} height={25} />
-                        <span>hello@courtney.lk</span>
-                    </div>
-                    <div className={styles.contactItem}>
-                        <Image src={"/icons/Address.png"} alt="Location" width={25} height={25} />
-                        <span>
-                            Courtney Lanka (Private) Limited<br />
-                            Level 35<br />
-                            World Trade Center<br />
-                            Colombo 01
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div className={styles.rightSide}>
-                <div className={styles.columns}>
-                    <div className={styles.column}>
-                        <h3 className={styles.columnTitle} onClick={() => setCompanyMenuOpen(!companyMenuOpen)}>{t("Company")}</h3>
-                        {companyMenuOpen && (
-                            <ul className={styles.menu}>
-                                <li><Link className={styles.link} href={"/about"}>{t("About Us")}</Link></li>
-                                <li><Link className={styles.link} href={"/success-stories"}>{t("Success Stories")}</Link></li>
-                                <li><Link className={styles.link} href={"/privacy-policy"}>{t("Privacy Policy")}</Link></li>
-                                <li><Link className={styles.link} href={"/terms"}>{t("Terms Conditions")}</Link></li>
-                                <li><Link className={styles.link} href={"/contact"}>{t("Contact Us")}</Link></li>
-                            </ul>
-                        )}
-                    </div>
-                    <div className={styles.column}>
-                        <h3 className={styles.columnTitle} onClick={() => setServicesMenuOpen(!servicesMenuOpen)}>{t("Services")}</h3>
-                        {servicesMenuOpen && (
-                            <ul className={styles.menu}>
-                                <li><Link className={styles.link} href={"/hire-permanent-staff"}>{t("Hire Permanent Staff")}</Link></li>
-                                <li><Link className={styles.link} href={"/staff-augmentation"}>{t("Staff Augmentation")}</Link></li>
-                                <li><Link className={styles.link} href={"/software-outsourcing"}>{t("Software Outsourcing")}</Link></li>
-                                <li><Link className={styles.link} href={"/build-remote-office"}>{t("Build Remote Office")}</Link></li>
-                            </ul>
-                        )}
-                    </div>
-                    <div className={styles.column}>
-                        <h3 className={styles.columnTitle} onClick={() => setHowToStartMenuOpen(!howToStartMenuOpen)}>{t("How To Start")}</h3>
-                        {howToStartMenuOpen && (
-                            <ul className={styles.menu}>
-                                <li><Link className={styles.link} href={"/you-asked"}>{t("You Asked")}</Link></li>
-                                <li><Link className={styles.link} href={"/we-proceed"}>{t("We Proceed")}</Link></li>
-                                <li><Link className={styles.link} href={"/negotiate"}>{t("Negotiate")}</Link></li>
-                                <li><Link className={styles.link} href={"/you-get"}>{t("You Get")}</Link></li>
-                            </ul>
-                        )}
-                    </div>
-                </div>
-                
-            </div>
-        </footer>
-    );
-}
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 }, 
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }, 
+  };
+
+  const linkVariants = {
+    hover: { 
+      scale: 1.1, 
+      color: "#21DBA9", 
+      transition: { duration: 0.3, ease: "easeInOut" }, 
+    },
+  };
+
+  return (
+    <motion.footer
+      className="font-display flex flex-col md:flex-row justify-between items-center md:items-start w-full bg-[#08070E] text-white p-6 md:px-8 lg:px-20 xl:px-40 py-8 border-t border-white/10"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }} 
+    >
+
+      <motion.div
+        className="flex flex-col items-center md:items-start mb-8 md:mb-0"
+        variants={itemVariants} 
+      >
+        <div className="text-center md:text-left mb-4">
+          <p className="text-base md:text-lg">Pay safely</p>
+          <p className="text-base md:text-lg">no matter where u are</p>
+        </div>
+        <Image
+          src="/logos/newBPlogo.png"
+          alt="New Logo"
+          width={190}
+          height={50}
+          className="object-contain w-[150px] md:w-[190px]"
+          priority
+        />
+      </motion.div>
+
+
+      <motion.div
+        className="flex flex-col items-center md:items-start"
+        variants={itemVariants} 
+      >
+        <h3 className="text-lg md:text-xl font-bold mb-4">Social</h3>
+        <ul className="space-y-2 text-center md:text-left">
+          <motion.li variants={itemVariants}>
+            <motion.a
+              href="https://x.com/buckspay_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-300 transition-colors inline-block"
+              whileHover="hover"
+              variants={linkVariants} 
+            >
+              Twitter (X)
+            </motion.a>
+          </motion.li>
+          <motion.li variants={itemVariants}>
+            <motion.a
+              href="https://www.instagram.com/buckspay_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-pink-500 transition-colors inline-block"
+              whileHover="hover"
+              variants={linkVariants} 
+            >
+              Instagram
+            </motion.a>
+          </motion.li>
+          <motion.li variants={itemVariants}>
+            <motion.a
+              href="https://www.linkedin.com/company/bucks-pay/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition-colors inline-block"
+              whileHover="hover"
+              variants={linkVariants} 
+            >
+              LinkedIn
+            </motion.a>
+          </motion.li>
+        </ul>
+      </motion.div>
+    </motion.footer>
+  );
+};
+
+export default Footer;

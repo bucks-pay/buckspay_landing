@@ -1,63 +1,43 @@
-import React, { useEffect, useState } from "react";
-import styles from "./Hero.module.css";
+import React from "react";
 import { useTranslation } from "react-i18next";
-import Link from "next/link";
 import Image from "next/image";
-import { CryptoDataProps } from "@/types";
-import { staticData } from "@/utils/staticData";
 
 const HeroSection: React.FC = () => {
   const { t } = useTranslation(["landing"]);
-  const [cryptoData, setCryptoData] = useState<CryptoDataProps[]>([]);
-
-  const getCoinMarketCap = async () => {
-    let dataToShow;
-    try {
-      const baseUrl =
-        process.env.NEXT_PUBLIC_STAGE == "dev"
-          ? "http://localhost:3000"
-          : "https://apiv1.buckspay.xyz";
-      const response = await fetch(`${baseUrl}/coinmarketcap`);
-      const result = await response.json();
-      setCryptoData(result);
-    } catch (error) {
-      console.error("Error fetching CoinMarketCap data:", error);
-      dataToShow = staticData;
-    }
-  };
-
-  useEffect(() => {
-    if (process.env.NEXT_PUBLIC_STAGE === "dev") {
-      setCryptoData(staticData);
-    } else {
-    }
-    getCoinMarketCap();
-  }, []);
-
-  const formatPrice = (price: number) => {
-    return price?.toLocaleString("en-US", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
-  };
 
   return (
-    <section id="hero" className={styles.heroSection}>
-      <div className={styles.content}>
-        <h1 className="fade-in">
-          {t("heroSection.title")} <br /> {t("heroSection.start")}{" "}
-          <span className={styles.highlight}>{t("heroSection.recolor")}</span>
-        </h1>
-        <div className={styles.content_main_table}>
-          <div className={`${styles.paragraphContainer} fade-in`}>
-            <span></span>
-            <p>{t("heroSection.paragraph")}</p>
-          </div>
+    <section
+      id="hero"
+      className="relative flex items-center justify-center h-[450px] md:h-[820px] w-full bg-gradient-to-r from-[#16205faf] to-[#64e1f4b7]"
+    >
+      {/* Mobile GIF */}
+      <div className="absolute inset-0 md:hidden flex items-center justify-center">
+        <div className="relative w-full h-[100%]">
+          <Image
+            src="/mobile.gif"
+            alt="Mobile Banner"
+            layout="fill"
+            objectFit="cover"
+            priority
+            className="object-center"
+          />
         </div>
       </div>
-      <div className={styles.vectors}>
-        <img src="/Vector.png" alt="Vector 1" className={styles.vector1} />
-        <img src="/Vector 2.png" alt="Vector 2" className={styles.vector2} />
+
+      {/* Desktop and Tablet Banner */}
+      <div className="absolute inset-0 hidden md:block">
+        <Image
+          src="/banner.gif"
+          alt="Desktop and Tablet Banner"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+      </div>
+
+      <div className="relative z-10 text-center text-white">
+        <h1 className="text-4xl lg:text-6xl font-semibold">{t("")}</h1>
+        <p className="mt-4 text-lg lg:text-xl">{t("")}</p>
       </div>
     </section>
   );

@@ -1,9 +1,9 @@
 {
   "heroSection": {
-    "title": "La forma mas simple de",
+    "title": "",
     "start": "pagar con",
     "recolor": "criptomonedas",
-    "paragraph": "Con BucksPay, realiza pagos diarios en criptomonedas de forma sencilla, sin bancos ni conversiones complicadas.",
+    "paragraph": "",
     "goApp": "Ir a la App",
     "infoBox": {
       "symbol": "Símbolo",
@@ -13,16 +13,16 @@
     }
   },
   "servicesSection": {
-    "title-1": "Diseñado para que cualquier persona, en cualquier lugar, pueda pagar con confianza.",
-    "subtitle": "Pagos más simples, para un mundo más conectado."
+    "title-1": "Paga con criptomonedas - no tendrá que preocuparse más por las conversiones manuales de moneda.",
+    "subtitle": ""
   },
   "aboutSection": {
-    "title": "Acerca de Nosotros",
-    "description": "¿Alguna vez has pensado en pagar con criptomonedas en la tienda de la esquina? ¿En tu barbería? ¿En un restaurante? ¿Tu arriendo? ¿Tus servicios públicos? Estas y muchas más opciones estarán disponibles para pagarse con tus cryptos usando BucksPay, siguenos en redes para más información y estate atento a nuevas actualizaciones.",
+    "title": "¿Por que Buckspay?",
+    "description": "Beneficios diseñados para brindar una experiencia fluida, segura y para los usuarios.",
     "imageDescriptions": {
-      "security": "Seguridad",
-      "speed": "Velocidad",
-      "efficiency": "Eficiencia"
+      "security": "",
+      "speed": "",
+      "efficiency": ""
     }
   },
   "contactSection": {

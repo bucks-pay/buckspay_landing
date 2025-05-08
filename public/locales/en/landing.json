@@ -1,9 +1,9 @@
 {
   "heroSection": {
-    "title": "The simplest way to",
-    "start": "pay with",
-    "recolor": "cryptocurrencies",
-    "paragraph": "With BucksPay, make everyday cryptocurrency payments easily, without banks or complicated conversions",
+    "title": "",
+    "start": "",
+    "recolor": "",
+    "paragraph": "",
     "goApp": "Go To App",
     "infoBox": {
       "symbol": "Symbol",
@@ -14,17 +14,21 @@
   },
 
   "servicesSection": {
-    "title-1": "Designed so anyone, anywhere can pay with confidence.",
-    "subtitle": "Simpler payments, for a more connected world."
+    "title-1": "Pay with crypto - no more manual currency conversions to worry about.",
+    "subtitle": ""
   },
 
   "aboutSection": {
-    "title": "About Us",
-    "description": "Have you ever thought about paying with cryptocurrencies at your corner store? At your barbershop? In a restaurant? For your rent? These and many more options will be available to pay with your cryptos using BucksPay. Follow us on social media for more information and stay tuned for new updates.",
+    "title": "Why Buckspay?",
+    "description": "Benefits designed to provide a seamless, secure, and accessible experience for all users.",
+    "aboutSection.features.card1.title":"",
+    "aboutSection.features.card2.title":"",
+    "aboutSection.features.card3.title":"",
+    "aboutSection.features.card4.title":"",
     "imageDescriptions": {
-      "security": "Security",
-      "speed": "Speed",
-      "efficiency": "Efficiency"
+      "security": "",
+      "speed": "",
+      "efficiency": ""
     }
   },
   "contactSection": {
