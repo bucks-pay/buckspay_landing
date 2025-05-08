@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import useEmblaCarousel from 'embla-carousel-react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import useEmblaCarousel from "embla-carousel-react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const TestimonialsSection: React.FC = () => {
@@ -12,18 +12,18 @@ const TestimonialsSection: React.FC = () => {
     {
       text: "I use Buckspay every time I travel and forget about currency exchange. I can pay local merchants straight from my phone, hassle-free. It's fast, secure, and helps me stay on top of my expenses at all times.",
       name: "Camila",
-      role: "Digital Entrepreneur"
+      role: "Digital Entrepreneur",
     },
     {
       text: "With Buckspay, I was able to pay with crypto at a local store in Colombia without any hassle.",
       name: "Lucas M.",
-      role: "Web3 Community"
+      role: "Web3 Community",
     },
     {
       text: "Tried Buckspay in Medellín and paid with cCop straight from my wallet. No conversions, no friction. It just works.",
       name: "Juan José",
-      role: "Blockchain enthusiast"
-    }
+      role: "Blockchain enthusiast",
+    },
   ];
 
   const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
@@ -47,10 +47,7 @@ const TestimonialsSection: React.FC = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <motion.div
-        className="text-center mb-8 md:mb-16"
-        variants={textVariants}
-      >
+      <motion.div className="text-center mb-8 md:mb-16" variants={textVariants}>
         <motion.h2
           className="text-3xl md:text-4xl font-bold mb-4"
           variants={textVariants}
@@ -82,10 +79,16 @@ const TestimonialsSection: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/2 to-black/20"></div>
                   </div>
                   <div className="relative z-10">
-                    <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-4 md:mb-6">"{testimonial.text}"</p>
+                    <p className="text-lg md:text-xl lg:text-2xl text-gray-200 mb-4 md:mb-6">
+                      {testimonial.text}:
+                    </p>
                     <div className="flex flex-col items-start">
-                      <span className="text-base md:text-lg font-semibold">{testimonial.name}</span>
-                      <span className="text-sm md:text-base text-gray-400">{testimonial.role}</span>
+                      <span className="text-base md:text-lg font-semibold">
+                        {testimonial.name}
+                      </span>
+                      <span className="text-sm md:text-base text-gray-400">
+                        {testimonial.role}
+                      </span>
                     </div>
                   </div>
                 </div>
