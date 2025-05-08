@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export const Header = () => {
   const { t } = useTranslation(["header"]);
@@ -19,6 +20,29 @@ export const Header = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId?: string
+  ) => {
+    e.preventDefault();
+    setMenuOpen(false);
+
+    if (targetId) {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const headerOffset = 100; // Ajusta este valor según la altura de tu header
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
   };
 
   useEffect(() => {
@@ -44,7 +68,10 @@ export const Header = () => {
   }, [lastScrollY]);
 
   return (
-    <header
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: isVisible ? 0 : -100 }}
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
       className={`${styles.container} ${
         isVisible ? styles.visible : styles.hidden
       }`}
@@ -61,27 +88,43 @@ export const Header = () => {
       <div className={`${styles.menu} ${menuOpen ? styles.menuOpen : ""}`}>
         {pathname === "/" && (
           <ul className={styles.menuList}>
-            <li>
-              <Link className={styles.navLink} href={"#about"}>
+            <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                className={styles.navLink}
+                href={"#about"}
+                onClick={(e) => handleLinkClick(e, "about")}
+              >
                 Why Buckspay
               </Link>
-            </li>
-            <li>
-              <Link className={styles.navLink} href={"#benefits"}>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                className={styles.navLink}
+                href={"#benefits"}
+                onClick={(e) => handleLinkClick(e, "benefits")}
+              >
                 Benefits
               </Link>
-            </li>
-            <li>
-              <Link className={styles.navLink} href={"#how-works"}>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                className={styles.navLink}
+                href={"#how-works"}
+                onClick={(e) => handleLinkClick(e, "how-works")}
+              >
                 How it Works
               </Link>
-            </li>
-            <li>
-              <Link className={styles.navLink} href={"#testimonials"}>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                className={styles.navLink}
+                href={"#testimonials"}
+                onClick={(e) => handleLinkClick(e, "testimonials")}
+              >
                 Testimonials
               </Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
               <Link
                 className={styles.navLink}
                 href="https://t.me/buckspay"
@@ -90,23 +133,27 @@ export const Header = () => {
               >
                 Community
               </Link>
-            </li>
+            </motion.li>
           </ul>
         )}
       </div>
 
       <div className={styles.containerButtons}>
-        <div className={`${styles.button}`}>
+        <motion.div
+          className={`${styles.button}`}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
           <Link href="https://app.buckspay.xyz/" target="_blank">
             <button className={`${styles.getStartedButton}`}>
               Get started now
               <FaArrowRight className="ml-2" />
             </button>
           </Link>
-        </div>
+        </motion.div>
         <HamburgerMenu onClick={toggleMenu} />
       </div>
-    </header>
+    </motion.header>
   );
 };
 

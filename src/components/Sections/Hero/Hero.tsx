@@ -8,17 +8,20 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative flex items-center justify-center h-[820px] w-full bg-gradient-to-r from-[#16205faf] to-[#64e1f4b7]"
+      className="relative flex items-center justify-center h-[450px] md:h-[820px] w-full bg-gradient-to-r from-[#16205faf] to-[#64e1f4b7]"
     >
       {/* Mobile GIF */}
-      <div className="absolute inset-0 md:hidden">
-        <Image
-          src="/mobile.gif"
-          alt="Mobile Banner"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
+      <div className="absolute inset-0 md:hidden flex items-center justify-center">
+        <div className="relative w-full h-[100%]">
+          <Image
+            src="/mobile.gif"
+            alt="Mobile Banner"
+            layout="fill"
+            objectFit="cover"
+            priority
+            className="object-center"
+          />
+        </div>
       </div>
 
       {/* Desktop and Tablet Banner */}
@@ -33,12 +36,8 @@ const HeroSection: React.FC = () => {
       </div>
 
       <div className="relative z-10 text-center text-white">
-        <h1 className="text-4xl lg:text-6xl font-semibold">
-          {t("")}
-        </h1>
-        <p className="mt-4 text-lg lg:text-xl">
-          {t("")}
-        </p>
+        <h1 className="text-4xl lg:text-6xl font-semibold">{t("")}</h1>
+        <p className="mt-4 text-lg lg:text-xl">{t("")}</p>
       </div>
     </section>
   );
