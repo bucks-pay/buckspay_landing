@@ -79,7 +79,7 @@ export const Footer = () => {
           </motion.li>
           <motion.li variants={itemVariants}>
             <motion.a
-              href="#"
+              href="https://www.linkedin.com/company/bucks-pay/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-500 transition-colors inline-block"

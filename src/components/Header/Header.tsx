@@ -82,7 +82,12 @@ export const Header = () => {
               </Link>
             </li>
             <li>
-              <Link className={styles.navLink} href={"#call"}>
+              <Link
+                className={styles.navLink}
+                href="https://t.me/buckspay"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Community
               </Link>
             </li>

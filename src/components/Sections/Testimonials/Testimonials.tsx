@@ -29,15 +29,14 @@ const TestimonialsSection: React.FC = () => {
   const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
   const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
-
   const textVariants = {
-    hidden: { opacity: 0, y: 50 }, 
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }, 
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
 
   const testimonialVariants = {
-    hidden: { opacity: 0, y: 50 }, 
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.3 } }, 
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.3 } },
   };
 
   return (
@@ -46,11 +45,11 @@ const TestimonialsSection: React.FC = () => {
       className="font-display relative flex flex-col items-center justify-center w-full min-h-screen bg-[#08070E] text-white py-12 md:py-20 px-4"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }} 
+      viewport={{ once: true, amount: 0.2 }}
     >
       <motion.div
         className="text-center mb-8 md:mb-16"
-        variants={textVariants} 
+        variants={textVariants}
       >
         <motion.h2
           className="text-3xl md:text-4xl font-bold mb-4"
@@ -68,16 +67,15 @@ const TestimonialsSection: React.FC = () => {
 
       <motion.div
         className="relative w-full max-w-6xl mx-auto flex flex-col items-center"
-        variants={testimonialVariants} 
+        variants={testimonialVariants}
       >
-
         <div className="overflow-hidden w-full" ref={emblaRef}>
           <div className="flex">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
                 className="flex-[0_0_100%] min-w-0"
-                variants={testimonialVariants} 
+                variants={testimonialVariants}
               >
                 <div className="relative mx-2 p-6 md:p-12 lg:p-16 rounded-xl bg-black/20">
                   <div className="absolute inset-0">
@@ -99,14 +97,14 @@ const TestimonialsSection: React.FC = () => {
         <div className="flex justify-between items-center w-full mt-6 px-4">
           <button
             onClick={scrollPrev}
-            className="flex items-center text-md md:text-lg text-gray-400 hover:text-white transition-colors"
+            className="flex items-center text-md md:text-lg text-gray-400 hover:text-white transition-colors cursor-pointer"
             aria-label="Previous testimonial"
           >
             <FaChevronLeft className="mr-3 w-6 h-6 md:w-8 md:h-8" /> Previous
           </button>
           <button
             onClick={scrollNext}
-            className="flex items-center text-md md:text-lg text-gray-400 hover:text-white transition-colors"
+            className="flex items-center text-md md:text-lg text-gray-400 hover:text-white transition-colors cursor-pointer"
             aria-label="Next testimonial"
           >
             Next <FaChevronRight className="ml-3 w-6 h-6 md:w-8 md:h-8" />
