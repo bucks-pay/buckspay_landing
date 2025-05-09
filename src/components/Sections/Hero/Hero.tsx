@@ -8,13 +8,13 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative flex items-center justify-center h-[450px] md:h-[820px] w-full bg-gradient-to-r from-[#16205faf] to-[#64e1f4b7]"
+      className="relative flex items-center justify-center h-[450px] md:h-[820px] w-full bg-[#08070E]"
     >
       {/* Mobile GIF */}
       <div className="absolute inset-0 md:hidden flex items-center justify-center">
         <div className="relative w-full h-[100%]">
           <Image
-            src="/mobile.gif"
+            src="https://firebasestorage.googleapis.com/v0/b/buckspay-92b3c.appspot.com/o/images%2Fmobile.gif?alt=media&token=c35768de-ae1e-4af9-bf08-26f827d8e1f2"
             alt="Mobile Banner"
             layout="fill"
             objectFit="cover"
@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
       {/* Desktop and Tablet Banner */}
       <div className="absolute inset-0 hidden md:block">
         <Image
-          src="/banner.gif"
+          src="https://firebasestorage.googleapis.com/v0/b/buckspay-92b3c.appspot.com/o/images%2Fbanner.gif?alt=media&token=3fa337a7-d272-4473-9404-40209475442a"
           alt="Desktop and Tablet Banner"
           layout="fill"
           objectFit="cover"
