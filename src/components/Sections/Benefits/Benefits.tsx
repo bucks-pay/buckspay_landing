@@ -74,7 +74,7 @@ const Benefits: React.FC = () => {
       >
         <div className="hidden lg:block absolute -top-0 -right-0 w-[200px] h-[200px] z-10">
           <Image
-            src={"/ccop.png"}
+            src="https://firebasestorage.googleapis.com/v0/b/buckspay-92b3c.appspot.com/o/images%2FCCOP.png?alt=media&token=09635c41-f9cb-4d51-83c2-52eee435f814"
             alt="ccop small"
             fill
             className="object-contain"
@@ -84,7 +84,7 @@ const Benefits: React.FC = () => {
 
         <div className="relative w-full aspect-square">
           <Image
-            src={"/ccop.png"}
+            src="https://firebasestorage.googleapis.com/v0/b/buckspay-92b3c.appspot.com/o/images%2FCCOP.png?alt=media&token=09635c41-f9cb-4d51-83c2-52eee435f814"
             alt="ccop large"
             fill
             className="object-contain"
