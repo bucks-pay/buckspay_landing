@@ -19,7 +19,7 @@ const NAV_ITEMS = [
   { id: "about", key: "nav.why" },
   { id: "benefits", key: "nav.benefits" },
   { id: "how-works", key: "nav.howItWorks" },
-  { id: "testimonials", key: "nav.testimonials" },
+  { id: "gasless", key: "nav.gasless" },
 ] as const;
 
 export const Header = () => {
@@ -98,23 +98,23 @@ export const Header = () => {
           aria-label="BucksPay"
           className="flex shrink-0 items-center rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#21dba9]"
         >
-          {/* Light-text wordmark for the dark theme. */}
+          {/* Full logo, white wordmark for the dark theme. */}
           <Image
-            src="/logos/buckspay-text-light.png"
+            src="/logos/buckspay-logo-white.png"
             alt="BucksPay"
-            width={130}
-            height={32}
+            width={185}
+            height={100}
             priority
-            className="logo-light h-8 w-auto"
+            className="logo-light h-20 w-auto -my-3"
           />
-          {/* Dark-text wordmark for the light theme. */}
+          {/* Full logo, black wordmark for the light theme. */}
           <Image
-            src="/logos/buckspay-text-dark.png"
+            src="/logos/buckspay-logo-black.png"
             alt="BucksPay"
-            width={130}
-            height={32}
+            width={185}
+            height={100}
             priority
-            className="logo-dark h-8 w-auto"
+            className="logo-dark h-20 w-auto -my-3"
           />
         </Link>
 

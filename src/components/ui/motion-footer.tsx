@@ -162,9 +162,12 @@ function Magnetic({ as = "a", className, children, ...rest }: MagneticProps) {
 // ---------------------------------------------------------------------------
 export interface FooterLink {
   label: string;
-  href: string;
+  /** Anchor target. Omit when using `onClick` (renders a button instead). */
+  href?: string;
   icon?: React.ReactNode;
   external?: boolean;
+  /** When set, the pill is a button that runs this instead of navigating. */
+  onClick?: () => void;
 }
 
 export interface CinematicFooterProps {
@@ -276,10 +279,13 @@ export function CinematicFooter({
                 {primary.map((l) => (
                   <Magnetic
                     key={l.label}
-                    as="a"
-                    href={l.href}
-                    target={l.external ? "_blank" : undefined}
-                    rel={l.external ? "noopener noreferrer" : undefined}
+                    as={l.onClick ? "button" : "a"}
+                    onClick={l.onClick}
+                    href={l.onClick ? undefined : l.href}
+                    target={l.external && !l.onClick ? "_blank" : undefined}
+                    rel={
+                      l.external && !l.onClick ? "noopener noreferrer" : undefined
+                    }
                     className="footer-glass-pill group flex items-center gap-3 rounded-full px-10 py-5 text-sm font-bold text-foreground md:text-base"
                   >
                     {l.icon}

@@ -33,6 +33,16 @@ const ShowcaseSection: React.FC = () => {
         }}
       />
 
+      {/* Blend the hills into the neighbouring sections so the edges aren't hard. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 z-10 h-32 bg-gradient-to-b from-background to-transparent md:h-40"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-background to-transparent md:h-56"
+      />
+
       {/* Copy overlay — pointer-events-none keeps the canvas untouched. */}
       <div className="pointer-events-none relative z-20 mx-auto max-w-3xl px-6 text-center">
         <h2 className="text-balance text-3xl font-bold text-foreground drop-shadow-lg md:text-4xl lg:text-5xl">
