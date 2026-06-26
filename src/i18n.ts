@@ -4,18 +4,20 @@ import { initReactI18next } from "react-i18next";
 import enLanding from "../public/locales/en/landing.json";
 import enHeader from "../public/locales/en/header.json";
 import enFooter from "../public/locales/en/footer.json";
+import enPrivacy from "../public/locales/en/privacy.json";
 
 import esLanding from "../public/locales/es/landing.json";
 import esHeader from "../public/locales/es/header.json";
 import esFooter from "../public/locales/es/footer.json";
+import esPrivacy from "../public/locales/es/privacy.json";
 
 export const resources = {
-  en: { landing: enLanding, header: enHeader, footer: enFooter },
-  es: { landing: esLanding, header: esHeader, footer: esFooter },
+  en: { landing: enLanding, header: enHeader, footer: enFooter, privacy: enPrivacy },
+  es: { landing: esLanding, header: esHeader, footer: esFooter, privacy: esPrivacy },
 } as const;
 
 export const defaultNS = "landing";
-export const namespaces = ["landing", "header", "footer"] as const;
+export const namespaces = ["landing", "header", "footer", "privacy"] as const;
 
 // Guard against re-initialization (Fast Refresh / multiple imports).
 if (!i18next.isInitialized) {
