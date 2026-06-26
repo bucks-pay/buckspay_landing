@@ -1,5 +1,16 @@
 {
-"socialMedia": {
-    "titulo": "Siguenos"
-    }
+  "heading": "¿Listo para empezar?",
+  "primary": {
+    "createAccount": "Crear cuenta",
+    "requestDemo": "Solicitar demo"
+  },
+  "marquee": [
+    "Pagos en stablecoins",
+    "Sin custodia",
+    "Multi-cadena",
+    "Marca blanca",
+    "Liquidación inmediata"
+  ],
+  "rights": "Todos los derechos reservados.",
+  "backToTop": "Volver arriba"
 }

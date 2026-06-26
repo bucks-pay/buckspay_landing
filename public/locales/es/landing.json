@@ -5,6 +5,12 @@
     "recolor": "criptomonedas",
     "paragraph": "",
     "goApp": "Ir a la App",
+    "titleLead": "Recibe pagos en cripto con",
+    "titleHighlight": "tu propia marca",
+    "description": "BucksPay es la infraestructura white-label para que tu negocio cobre en stablecoins sobre Ethereum, Polygon, Base, Arbitrum y Stellar. Sin custodia: los fondos llegan directo a tu wallet.",
+    "ctaPrimary": "Empezar gratis",
+    "ctaSecondary": "Solicitar demo",
+    "trust": "Compatible con las principales redes y wallets",
     "infoBox": {
       "symbol": "Símbolo",
       "name": "Nombre",
@@ -16,14 +22,120 @@
     "title-1": "Paga con criptomonedas - no tendrá que preocuparse más por las conversiones manuales de moneda.",
     "subtitle": ""
   },
+  "showcaseSection": {
+    "title": "Tu infraestructura de pagos, en piloto automático",
+    "subtitle": "Cobrá en stablecoins sobre múltiples redes, con confirmación on-chain automática y liquidación directa a tu wallet. Vos ponés la marca; nosotros, la tecnología."
+  },
   "aboutSection": {
-    "title": "¿Por que Buckspay?",
-    "description": "Beneficios diseñados para brindar una experiencia fluida, segura y para los usuarios.",
-    "imageDescriptions": {
-      "security": "",
-      "speed": "",
-      "efficiency": ""
+    "eyebrow": "Por qué BucksPay",
+    "title": "La forma profesional de cobrar en cripto",
+    "description": "Infraestructura lista para que tu negocio acepte pagos en stablecoins, con tu marca y sin complicaciones técnicas.",
+    "learnMore": "Saber más",
+    "cards": {
+      "whiteLabel": {
+        "title": "Cobrá con tu marca",
+        "description": "Páginas de pago personalizadas con tu logo, colores y dominio. Tus clientes pagan en una experiencia 100% tuya."
+      },
+      "nonCustodial": {
+        "title": "Sin custodia",
+        "description": "Los fondos van directo a tu wallet. BucksPay nunca toca tu dinero — vos tenés el control total."
+      },
+      "multichain": {
+        "title": "Multi-red, sin fricción",
+        "description": "Aceptá stablecoins en Ethereum, Polygon, Base, Arbitrum y Stellar, con MetaMask, WalletConnect y Coinbase."
+      }
     }
+  },
+  "benefitsSection": {
+    "badge": "Beneficios",
+    "titleLead": "Menos fricción,",
+    "titleHighlight": "más ingresos",
+    "description": "Aceptar stablecoins con BucksPay no es solo tecnología nueva: es liquidación inmediata, menos comisiones y alcance global, sin sumar complejidad a tu operación.",
+    "cards": {
+      "instantSettlement": {
+        "title": "Liquidación inmediata",
+        "description": "Cada pago se confirma on-chain y llega directo a tu wallet en minutos. Sin esperas de settlement bancario ni retenciones."
+      },
+      "lowerFees": {
+        "title": "Menos comisiones",
+        "description": "Sin intermediarios ni contracargos. Te quedás con una mayor parte de cada venta y olvidás los chargebacks."
+      },
+      "globalReach": {
+        "title": "Alcance global",
+        "description": "Cualquier cliente con una wallet puede pagarte, sin fronteras ni cuentas bancarias. Vendé al mundo desde el día uno."
+      }
+    },
+    "cta": "Empezar gratis"
+  },
+  "howWorksSection": {
+    "eyebrow": "Cómo funciona",
+    "title": "Cobrá en cuatro pasos",
+    "description": "De crear el enlace a recibir los fondos en tu wallet, sin escribir una sola línea de código.",
+    "steps": {
+      "createLink": {
+        "badge": "Paso 1",
+        "title": "Creá tu enlace de pago",
+        "description": "Desde el dashboard, generá un enlace con monto fijo, abierto o por rango. Reutilizable o de un solo uso."
+      },
+      "share": {
+        "badge": "Paso 2",
+        "title": "Compartilo con tu cliente",
+        "description": "Enviá la URL con tu marca por donde quieras: web, WhatsApp, email o un código QR."
+      },
+      "customerPays": {
+        "badge": "Paso 3",
+        "title": "Tu cliente paga con su wallet",
+        "description": "Conecta MetaMask, WalletConnect o Coinbase, firma la transacción y listo."
+      },
+      "settle": {
+        "badge": "Paso 4",
+        "title": "Recibís los fondos al instante",
+        "description": "La transacción se confirma on-chain y el dinero llega directo a tu wallet. Lo seguís en tus analíticas."
+      }
+    },
+    "cta": "Crear mi primer enlace"
+  },
+  "testimonialsSection": {
+    "eyebrow": "Testimonios",
+    "title": "Negocios que ya cobran con BucksPay",
+    "description": "Equipos de e-commerce, SaaS y servicios que integraron pagos en cripto con su marca, sin custodia y en múltiples redes.",
+    "prev": "Testimonio anterior",
+    "next": "Testimonio siguiente",
+    "helpful": "Útil",
+    "verified": "Verificado",
+    "items": {
+      "camila": {
+        "name": "Camila",
+        "role": "Emprendedora digital",
+        "quote": "Uso BucksPay cada vez que viajo y me olvido del cambio de moneda. Pago a los comercios locales directo desde el celular, sin complicaciones. Es rápido, seguro y me ayuda a tener mis gastos siempre bajo control.",
+        "tags": ["Viajes", "Pagos móviles"]
+      },
+      "lucas": {
+        "name": "Lucas M.",
+        "role": "Comunidad Web3",
+        "quote": "Con BucksPay pude pagar con cripto en una tienda local en Colombia sin ningún problema.",
+        "tags": ["Retail", "Web3"]
+      },
+      "juanjose": {
+        "name": "Juan José",
+        "role": "Entusiasta blockchain",
+        "quote": "Probé BucksPay en Medellín y pagué con cCOP directo desde mi wallet. Sin conversiones, sin fricción. Simplemente funciona.",
+        "tags": ["cCOP", "Wallet"]
+      },
+      "alejandro": {
+        "name": "Alejandro Ramos",
+        "role": "CEO · WavyNode",
+        "quote": "Integramos BucksPay en WavyNode y en pocos días ya cobrábamos a clientes de todo el mundo en stablecoins. La liquidación directa a nuestra wallet nos simplificó toda la tesorería.",
+        "tags": ["SaaS", "Multi-red"]
+      }
+    }
+  },
+  "callToActionSection": {
+    "titleLead": "Empezá a cobrar en",
+    "titleHighlight": "cripto hoy",
+    "subtitle": "Creá tu cuenta, configurá tu marca y compartí tu primer enlace de pago en minutos. Sin código y sin custodia.",
+    "ctaPrimary": "Crear cuenta gratis",
+    "ctaSecondary": "Unite a la comunidad"
   },
   "contactSection": {
     "title": "Contáctanos",

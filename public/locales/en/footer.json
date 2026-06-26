@@ -1,5 +1,16 @@
 {
-"socialMedia": {
-    "titulo": "Follow Us"
-    }
+  "heading": "Ready to get started?",
+  "primary": {
+    "createAccount": "Create account",
+    "requestDemo": "Request a demo"
+  },
+  "marquee": [
+    "Stablecoin payments",
+    "Non-custodial",
+    "Multi-chain",
+    "White-label",
+    "Instant settlement"
+  ],
+  "rights": "All rights reserved.",
+  "backToTop": "Back to top"
 }
