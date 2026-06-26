@@ -2,7 +2,7 @@
 
 import "./globals.css";
 import HeroSection from "@/components/Sections/Hero/Hero";
-import ServicesSection from "@/components/Sections/Services/Services";
+import ShowcaseSection from "@/components/Sections/Showcase/Showcase";
 import AboutSection from "@/components/Sections/About/About";
 import ContactSection from "@/components/Sections/Contact/Contact";
 import BenefitsSection from "@/components/Sections/Benefits/Benefits";
@@ -19,7 +19,7 @@ export default function Home() {
     <>
       {isLoading && <Loading text={textLoading} />}
       <HeroSection />
-      <ServicesSection />
+      <ShowcaseSection />
       <AboutSection />
       <BenefitsSection />
       <HowWorksSection />

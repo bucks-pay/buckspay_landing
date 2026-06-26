@@ -1,6 +1,12 @@
 {
-  "services": "Services",
-  "about": "About Us",
-  "contact": "Contact Us",
-  "goApp": "Go To App"
+  "nav": {
+    "why": "Why BucksPay",
+    "benefits": "Benefits",
+    "howItWorks": "How it works",
+    "testimonials": "Testimonials",
+    "community": "Community"
+  },
+  "cta": "Get started",
+  "menu": "Menu",
+  "toggleTheme": "Toggle theme"
 }

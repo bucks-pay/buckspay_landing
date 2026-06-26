@@ -5,6 +5,78 @@
   --font-display: "Inter", sans-serif;
 }
 
+/* shadcn/ui semantic tokens mapped to the BucksPay brand (Tailwind v4).
+   See .claude/skills/buckspay-design-system §3 for the source palette. */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  /* BucksPay brand palette as shadcn tokens (dark-first) */
+  --background: #08070e;
+  --foreground: #ffffff;
+  --card: #0e0d17;
+  --card-foreground: #ffffff;
+  --popover: #0e0d17;
+  --popover-foreground: #ffffff;
+  --primary: #2194db;
+  --primary-foreground: #ffffff;
+  --secondary: #15131f;
+  --secondary-foreground: #ffffff;
+  --muted: #15131f;
+  --muted-foreground: #a0a4b8;
+  --accent: #21dba9;
+  --accent-foreground: #08070e;
+  --destructive: #ff5c5c;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #2194db;
+}
+
+/* Light theme — "pure white minimalist". Applied when the `.light` class is on
+   <html> (set by the theme toggle). Overrides the dark tokens above; brand
+   accents (primary/accent) stay the same so they read on both surfaces. */
+.light {
+  --background: #ffffff;
+  --foreground: #0b0b12;
+  --card: #f6f7f9;
+  --card-foreground: #0b0b12;
+  --popover: #ffffff;
+  --popover-foreground: #0b0b12;
+  --primary: #2194db;
+  --primary-foreground: #ffffff;
+  --secondary: #eef0f3;
+  --secondary-foreground: #0b0b12;
+  --muted: #eef0f3;
+  --muted-foreground: #5a6072;
+  --accent: #21dba9;
+  --accent-foreground: #07120e;
+  --destructive: #e5484d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(11, 11, 18, 0.1);
+  --input: rgba(11, 11, 18, 0.15);
+  --ring: #2194db;
+}
+
 :root {
   --bg: white;
   --textColor: black;
@@ -69,6 +141,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Readex Pro", sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body textarea {
@@ -86,7 +161,9 @@ body textarea {
   box-sizing: border-box;
   /* background-color: var(--softBg); */
   color: var(--softTextColor);
-  overflow-x: hidden;
+  /* `clip` recorta el desborde horizontal SIN crear un contenedor de scroll.
+     Con `hidden`, CSS fuerza overflow-y a `auto` y aparece un segundo scroll. */
+  overflow-x: clip;
 }
 
 main {
@@ -99,4 +176,19 @@ main {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Theme-aware logo swap, driven by the .light/.dark class on <html> (set by the
+   no-flash script). Both images render; CSS shows the right one — no flash. */
+.logo-light {
+  display: block;
+}
+.logo-dark {
+  display: none;
+}
+.light .logo-light {
+  display: none;
+}
+.light .logo-dark {
+  display: block;
 }

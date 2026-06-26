@@ -5,6 +5,12 @@
     "recolor": "",
     "paragraph": "",
     "goApp": "Go To App",
+    "titleLead": "Accept crypto payments under",
+    "titleHighlight": "your own brand",
+    "description": "BucksPay is the white-label infrastructure for your business to get paid in stablecoins across Ethereum, Polygon, Base, Arbitrum and Stellar. Non-custodial — funds settle straight to your wallet.",
+    "ctaPrimary": "Get started",
+    "ctaSecondary": "Request a demo",
+    "trust": "Works with the chains and wallets you already use",
     "infoBox": {
       "symbol": "Symbol",
       "name": "Name",
@@ -17,19 +23,121 @@
     "title-1": "Pay with crypto - no more manual currency conversions to worry about.",
     "subtitle": ""
   },
+  "showcaseSection": {
+    "title": "Your payment infrastructure, on autopilot",
+    "subtitle": "Accept stablecoins across multiple chains, with automatic on-chain confirmation and settlement straight to your wallet. You bring the brand; we bring the tech."
+  },
 
   "aboutSection": {
-    "title": "Why Buckspay?",
-    "description": "Benefits designed to provide a seamless, secure, and accessible experience for all users.",
-    "aboutSection.features.card1.title":"",
-    "aboutSection.features.card2.title":"",
-    "aboutSection.features.card3.title":"",
-    "aboutSection.features.card4.title":"",
-    "imageDescriptions": {
-      "security": "",
-      "speed": "",
-      "efficiency": ""
+    "eyebrow": "Why BucksPay",
+    "title": "The professional way to get paid in crypto",
+    "description": "Infrastructure ready for your business to accept stablecoin payments, under your brand and without the technical hassle.",
+    "learnMore": "Learn more",
+    "cards": {
+      "whiteLabel": {
+        "title": "Get paid under your brand",
+        "description": "Custom payment pages with your logo, colors and domain. Your customers pay in an experience that's entirely yours."
+      },
+      "nonCustodial": {
+        "title": "Non-custodial by design",
+        "description": "Funds settle straight to your wallet. BucksPay never touches your money — you stay in full control."
+      },
+      "multichain": {
+        "title": "Multi-chain, zero friction",
+        "description": "Accept stablecoins on Ethereum, Polygon, Base, Arbitrum and Stellar, with MetaMask, WalletConnect and Coinbase."
+      }
     }
+  },
+  "benefitsSection": {
+    "badge": "Benefits",
+    "titleLead": "Less friction,",
+    "titleHighlight": "more revenue",
+    "description": "Accepting stablecoins with BucksPay isn't just new tech: it's instant settlement, lower fees and global reach — without adding complexity to your operation.",
+    "cards": {
+      "instantSettlement": {
+        "title": "Instant settlement",
+        "description": "Every payment confirms on-chain and lands straight in your wallet in minutes. No bank settlement delays, no holds."
+      },
+      "lowerFees": {
+        "title": "Lower fees",
+        "description": "No middlemen, no chargebacks. You keep more of every sale and forget about disputes."
+      },
+      "globalReach": {
+        "title": "Global reach",
+        "description": "Anyone with a wallet can pay you — no borders, no bank accounts. Sell worldwide from day one."
+      }
+    },
+    "cta": "Get started"
+  },
+  "howWorksSection": {
+    "eyebrow": "How it works",
+    "title": "Get paid in four steps",
+    "description": "From creating the link to funds landing in your wallet — without writing a single line of code.",
+    "steps": {
+      "createLink": {
+        "badge": "Step 1",
+        "title": "Create your payment link",
+        "description": "From the dashboard, generate a link with a fixed, open or ranged amount. Reusable or single-use."
+      },
+      "share": {
+        "badge": "Step 2",
+        "title": "Share it with your customer",
+        "description": "Send the branded URL anywhere: web, WhatsApp, email or a QR code."
+      },
+      "customerPays": {
+        "badge": "Step 3",
+        "title": "Your customer pays with their wallet",
+        "description": "They connect MetaMask, WalletConnect or Coinbase, sign the transaction and that's it."
+      },
+      "settle": {
+        "badge": "Step 4",
+        "title": "Funds land instantly",
+        "description": "The transaction confirms on-chain and the money settles straight to your wallet. Track it in your analytics."
+      }
+    },
+    "cta": "Create my first link"
+  },
+  "testimonialsSection": {
+    "eyebrow": "Testimonials",
+    "title": "Businesses already getting paid with BucksPay",
+    "description": "E-commerce, SaaS and service teams that added crypto payments under their own brand — non-custodial and across multiple chains.",
+    "prev": "Previous testimonial",
+    "next": "Next testimonial",
+    "helpful": "Helpful",
+    "verified": "Verified",
+    "items": {
+      "camila": {
+        "name": "Camila",
+        "role": "Digital Entrepreneur",
+        "quote": "I use BucksPay every time I travel and forget about currency exchange. I can pay local merchants straight from my phone, hassle-free. It's fast, secure, and helps me stay on top of my expenses at all times.",
+        "tags": ["Travel", "Mobile"]
+      },
+      "lucas": {
+        "name": "Lucas M.",
+        "role": "Web3 Community",
+        "quote": "With BucksPay, I was able to pay with crypto at a local store in Colombia without any hassle.",
+        "tags": ["Retail", "Web3"]
+      },
+      "juanjose": {
+        "name": "Juan José",
+        "role": "Blockchain enthusiast",
+        "quote": "Tried BucksPay in Medellín and paid with cCOP straight from my wallet. No conversions, no friction. It just works.",
+        "tags": ["cCOP", "Wallet"]
+      },
+      "alejandro": {
+        "name": "Alejandro Ramos",
+        "role": "CEO · WavyNode",
+        "quote": "We integrated BucksPay at WavyNode and within days we were charging clients worldwide in stablecoins. Settlement straight to our wallet simplified our entire treasury.",
+        "tags": ["SaaS", "Multi-chain"]
+      }
+    }
+  },
+  "callToActionSection": {
+    "titleLead": "Start getting paid in",
+    "titleHighlight": "crypto today",
+    "subtitle": "Create your account, set up your brand and share your first payment link in minutes. No code, non-custodial.",
+    "ctaPrimary": "Create free account",
+    "ctaSecondary": "Join the community"
   },
   "contactSection": {
     "title": "Contact Us",

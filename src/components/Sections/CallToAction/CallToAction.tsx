@@ -1,58 +1,81 @@
 "use client";
 
-import Link from "next/link";
 import React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa";
+import { GradientBars } from "@/components/ui/gradient-bars-background";
+
+// Brand equalizer palette (blue ↔ teal), cycled per bar.
+const BRAND_BARS = ["rgb(33, 148, 219)", "rgb(33, 219, 169)"];
 
 const CallToAction: React.FC = () => {
-  // Variantes de animación
-  const textVariants = {
-    hidden: { opacity: 0, y: 50 }, 
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }, 
-  };
+  const { t } = useTranslation(["landing"]);
 
   return (
-    <motion.section
+    <section
       id="call"
-      className="font-display relative w-full py-40 overflow-hidden"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }} 
+      className="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden bg-background py-32"
     >
- 
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#1a1a2e_0%,#08070E_70%)]"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-blue-400/10 to-transparent"></div>
-      </div>
+      {/* Animated equalizer bars (brand colors). */}
+      <GradientBars
+        numBars={15}
+        colors={BRAND_BARS}
+        animationDuration={2}
+        className="opacity-70"
+      />
 
+      {/* Soft fades into the neighbouring sections. The bottom fade dissolves the
+          bars into the page background so the curtain-reveal footer — also on
+          --background — flows in without a hard seam. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-1/4 bg-gradient-to-b from-background to-transparent"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-1/3 bg-gradient-to-t from-background via-background/70 to-transparent"
+      />
 
       <motion.div
-        className="relative z-10 container mx-auto px-4"
-        variants={textVariants} 
+        className="relative z-10 mx-auto max-w-3xl px-6 text-center"
+        initial={{ opacity: 0, y: 32 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        <div className="max-w-3xl mx-auto text-center flex flex-col items-center justify-center">
-          <motion.h2
-            className="text-4xl font-bold text-white mb-6"
-            variants={textVariants} 
+        <h2 className="text-balance text-4xl font-bold tracking-tight text-foreground md:text-6xl">
+          {t("callToActionSection.titleLead")}{" "}
+          <span className="bg-gradient-to-r from-[#2194db] to-[#21dba9] bg-clip-text text-transparent">
+            {t("callToActionSection.titleHighlight")}
+          </span>
+        </h2>
+        <p className="mx-auto mt-5 max-w-xl text-pretty text-base text-muted-foreground md:text-lg">
+          {t("callToActionSection.subtitle")}
+        </p>
+
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Link
+            href="https://dashboard.buckspay.xyz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#2194db] to-[#21dba9] px-8 py-4 font-semibold text-white shadow-[0_0_50px_-12px_rgba(33,219,169,0.6)] transition-transform hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#21dba9]"
           >
-            Ready to pay with crypto?
-          </motion.h2>
-          <Link href="https://app.buckspay.xyz/" target="_blank">
-            <motion.button
-              className="relative flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#2194DB] to-[#21DBA9] text-black font-semibold rounded-full transition-transform duration-300 ease-out transform hover:scale-110 shadow-lg overflow-hidden group"
-              variants={textVariants} 
-            >
-              <span className="absolute inset-0 bg-white/30 skew-x-[-45deg] -left-full transition-all duration-500 ease-out group-hover:left-full"></span>
-              <span className="relative z-10 flex items-center">
-                Get started now
-                <FaArrowRight className="ml-2" />
-              </span>
-            </motion.button>
+            {t("callToActionSection.ctaPrimary")}
+            <FaArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          </Link>
+          <Link
+            href="https://t.me/buckspay"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full border border-foreground/15 px-8 py-4 font-medium text-foreground transition-colors hover:border-foreground/30 hover:bg-foreground/5"
+          >
+            {t("callToActionSection.ctaSecondary")}
           </Link>
         </div>
       </motion.div>
-    </motion.section>
+    </section>
   );
 };
 
