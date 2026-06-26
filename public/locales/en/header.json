@@ -1,9 +1,10 @@
 {
   "nav": {
-    "why": "Why BucksPay",
+    "why": "Why BucksPay?",
     "benefits": "Benefits",
-    "howItWorks": "How it works",
+    "howItWorks": "How it works?",
     "testimonials": "Testimonials",
+    "gasless": "Gasless",
     "community": "Community"
   },
   "cta": "Get started",

@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaBolt, FaPercent, FaGlobe, FaCircle } from "react-icons/fa";
 import { GeometricBackdrop } from "@/components/ui/shape-landing-hero";
+import { openAccountModal } from "@/lib/account-modal";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -112,14 +112,13 @@ const Benefits: React.FC = () => {
           viewport={{ once: true, amount: 0.4 }}
           className="mt-12 flex justify-center"
         >
-          <Link
-            href="https://dashboard.buckspay.xyz/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
+            onClick={openAccountModal}
             className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#2194db] to-[#21dba9] px-6 py-3 font-semibold text-white shadow-[0_0_40px_-10px_rgba(33,219,169,0.45)] transition-transform hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#21dba9]"
           >
             {t("benefitsSection.cta")}
-          </Link>
+          </button>
         </motion.div>
       </div>
     </section>

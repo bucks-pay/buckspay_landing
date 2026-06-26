@@ -7,7 +7,8 @@ import AboutSection from "@/components/Sections/About/About";
 import ContactSection from "@/components/Sections/Contact/Contact";
 import BenefitsSection from "@/components/Sections/Benefits/Benefits";
 import HowWorksSection from "@/components/Sections/HowWorks/HowWorks";
-import TestimonialsSection from "@/components/Sections/Testimonials/Testimonials";
+import GaslessSection from "@/components/Sections/Gasless/Gasless";
+// import TestimonialsSection from "@/components/Sections/Testimonials/Testimonials";
 import CallToAction from "@/components/Sections/CallToAction/CallToAction";
 import { useState } from "react";
 import Loading from "@/components/Loading/Loading";
@@ -23,7 +24,9 @@ export default function Home() {
       <AboutSection />
       <BenefitsSection />
       <HowWorksSection />
-      <TestimonialsSection />
+      <GaslessSection />
+      {/* Testimonials oculta por ahora — restaurar descomentando aquí y el import. */}
+      {/* <TestimonialsSection /> */}
       <CallToAction />
       <ContactSection
         isLoading={isLoading}

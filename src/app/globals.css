@@ -192,3 +192,12 @@ main {
 .light .logo-dark {
   display: block;
 }
+
+/* Monochrome network logos (those shipped without brand color): white on the
+   dark theme, black on the light theme. */
+.logo-mono {
+  filter: brightness(0) invert(1);
+}
+.light .logo-mono {
+  filter: brightness(0);
+}

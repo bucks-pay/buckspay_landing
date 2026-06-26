@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { OPEN_ACCOUNT_EVENT } from "@/lib/account-modal";
 import {
   FaXTwitter,
   FaInstagram,
@@ -13,22 +14,26 @@ import {
   CinematicFooter,
   type FooterLink,
 } from "@/components/ui/motion-footer";
+import AccountModal from "@/components/ui/account-modal";
 
 export const Footer = () => {
   const { t } = useTranslation(["footer"]);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  // Allow any CTA across the page to open this modal.
+  useEffect(() => {
+    const handler = () => setModalOpen(true);
+    window.addEventListener(OPEN_ACCOUNT_EVENT, handler);
+    return () => window.removeEventListener(OPEN_ACCOUNT_EVENT, handler);
+  }, []);
 
   const primary: FooterLink[] = [
     {
       label: t("primary.createAccount"),
-      href: "https://dashboard.buckspay.xyz/",
-      external: true,
+      onClick: () => setModalOpen(true),
       icon: (
         <FaArrowRight className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-foreground" />
       ),
-    },
-    {
-      label: t("primary.requestDemo"),
-      href: "#contact",
     },
   ];
 
@@ -58,16 +63,19 @@ export const Footer = () => {
   const marquee = t("marquee", { returnObjects: true }) as string[];
 
   return (
-    <CinematicFooter
-      heading={t("heading")}
-      primary={primary}
-      social={social}
-      marquee={marquee}
-      labels={{
-        rights: t("rights"),
-        backToTop: t("backToTop"),
-      }}
-    />
+    <>
+      <CinematicFooter
+        heading={t("heading")}
+        primary={primary}
+        social={social}
+        marquee={marquee}
+        labels={{
+          rights: t("rights"),
+          backToTop: t("backToTop"),
+        }}
+      />
+      <AccountModal open={modalOpen} onClose={() => setModalOpen(false)} />
+    </>
   );
 };
 

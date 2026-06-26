@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
+import { HeroAmbient } from "@/components/ui/hero-ambient";
 
 const transitionVariants = {
   item: {
@@ -31,6 +32,15 @@ interface CtaLink {
   href: string;
 }
 
+interface NetworkItem {
+  name: string;
+  logo: string;
+  /** Logo has no brand color (black) — force it to adapt to the theme. */
+  mono?: boolean;
+  /** Raster logo with a solid background — round its corners like a tile. */
+  rounded?: boolean;
+}
+
 export interface HeroSectionProps {
   /** First part of the headline (default foreground color). */
   titleLead?: string;
@@ -42,7 +52,7 @@ export interface HeroSectionProps {
   /** Caption above the supported-networks strip. */
   trustLabel?: string;
   /** Networks shown in the trust strip. */
-  networks?: string[];
+  networks?: NetworkItem[];
   imageSrc?: string;
   imageAlt?: string;
 }
@@ -61,7 +71,14 @@ export function HeroSection({
   primaryCta,
   secondaryCta,
   trustLabel = "Works with the chains and wallets you already use",
-  networks = ["Ethereum", "Polygon", "Base", "Arbitrum", "Stellar"],
+  networks = [
+    { name: "Ethereum", logo: "/logos/ethereum.svg", mono: true },
+    { name: "Polygon", logo: "/logos/polygon-icon-primary-purple.svg" },
+    { name: "Base", logo: "/logos/Base.jpeg", rounded: true },
+    { name: "Arbitrum", logo: "/logos/arbitrum-arb-logo.svg" },
+    { name: "Avalanche", logo: "/logos/Avalanche_Logomark_Red.svg" },
+    { name: "Stellar", logo: "/logos/stellar-xlm-logo.svg", mono: true },
+  ],
   imageSrc = "/capturadashboard.png",
   imageAlt = "BucksPay dashboard",
 }: HeroSectionProps) {
@@ -70,8 +87,9 @@ export function HeroSection({
       <section className="bg-background">
         <div className="relative pt-24">
           <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]" />
-          <div className="mx-auto max-w-5xl px-6">
-            <div className="sm:mx-auto lg:mr-auto">
+          <HeroAmbient />
+          <div className="relative z-10 mx-auto max-w-5xl px-6">
+            <div className="mx-auto max-w-3xl text-center">
               <AnimatedGroup
                 variants={{
                   container: {
@@ -85,13 +103,13 @@ export function HeroSection({
                   ...transitionVariants,
                 }}
               >
-                <h1 className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16">
+                <h1 className="mx-auto mt-8 max-w-3xl text-balance text-5xl font-medium md:text-6xl lg:mt-16">
                   {titleLead}{" "}
                   <span className="bg-gradient-to-r from-[#2194db] to-[#21dba9] bg-clip-text text-transparent">
                     {titleHighlight}
                   </span>
                 </h1>
-                <p className="mt-8 max-w-2xl text-pretty text-lg text-muted-foreground">
+                <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-muted-foreground">
                   {description}
                 </p>
                 {(primaryCta || secondaryCta) && (
@@ -145,7 +163,7 @@ export function HeroSection({
                 aria-hidden
                 className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
               />
-              <div className="inset-shadow-2xs ring-[#0e0d17] bg-[#0e0d17] relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-white/10 p-4 shadow-lg shadow-zinc-950/15 ring-1">
+              <div className="inset-shadow-2xs ring-[#0e0d17] bg-[#0e0d17] relative mx-auto max-w-7xl overflow-hidden rounded-2xl border border-white/10 p-2 shadow-lg shadow-zinc-950/15 ring-1">
                 <Image
                   className="relative h-auto w-full rounded-2xl border border-white/10"
                   src={imageSrc}
@@ -162,15 +180,24 @@ export function HeroSection({
 
       <section className="bg-background pb-16 pt-12 md:pb-28">
         <div className="m-auto max-w-5xl px-6">
-          <p className="text-center text-sm text-muted-foreground">{trustLabel}</p>
-          <div className="mx-auto mt-8 flex max-w-3xl flex-wrap items-center justify-center gap-x-10 gap-y-4">
+          <p className="text-center text-base text-muted-foreground">
+            {trustLabel}
+          </p>
+          <div className="mx-auto mt-10 flex max-w-4xl flex-wrap items-center justify-center gap-x-10 gap-y-6">
             {networks.map((network) => (
-              <span
-                key={network}
-                className="text-base font-medium text-foreground/70"
-              >
-                {network}
-              </span>
+              <div key={network.name} className="flex items-center gap-2.5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={network.logo}
+                  alt={network.name}
+                  className={`h-7 w-7 object-contain md:h-8 md:w-8 ${
+                    network.mono ? "logo-mono" : ""
+                  } ${network.rounded ? "rounded-md" : ""}`}
+                />
+                <span className="text-lg font-semibold text-foreground/80">
+                  {network.name}
+                </span>
+              </div>
             ))}
           </div>
         </div>
