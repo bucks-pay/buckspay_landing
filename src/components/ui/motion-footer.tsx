@@ -139,7 +139,6 @@ function Magnetic({ as = "a", className, children, ...rest }: MagneticProps) {
     y.set(0);
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const common: any = {
     ref,
     onMouseMove: onMove,

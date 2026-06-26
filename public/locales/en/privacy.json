@@ -1,0 +1,161 @@
+{
+  "footerHeading": "Legal",
+  "footerLink": "Privacy Policy",
+  "title": "Privacy Policy",
+  "lastUpdatedLabel": "Last updated",
+  "effectiveDateLabel": "Effective date",
+  "lastUpdatedValue": "May 9, 2026",
+  "effectiveDateValue": "May 9, 2026",
+  "intro": [
+    "At BucksPay (\"BucksPay\", \"we\", \"our\") we respect your privacy. This Privacy Policy describes what data we collect when you use our mobile application (BucksPay, package com.buckspay.mobile) and our website buckspay.xyz (collectively, the \"Services\"), how we use it, with whom we share it, and what rights you have over it.",
+    "By using the Services you accept the practices described in this Policy. If you do not agree, please do not use the Services."
+  ],
+  "whoWeAre": {
+    "title": "1. Who we are",
+    "bodyBefore": "BucksPay operates a digital wallet that lets you send, receive and manage money simply. The data controller for your personal data is the BucksPay team, reachable at ",
+    "bodyAfter": "."
+  },
+  "dataCollected": {
+    "title": "2. Data we collect",
+    "intro": "We only collect the data necessary to operate the Services. Specifically:",
+    "account": {
+      "title": "2.1. Registration and account data",
+      "items": [
+        "First and last name",
+        "Email address",
+        "Phone number",
+        "Country and identification document type / number",
+        "Username (handle in the form @user)",
+        "Password (stored as a hash, never in plain text)"
+      ]
+    },
+    "financial": {
+      "title": "2.2. Financial and transaction data",
+      "items": [
+        "Wallet addresses (public) associated with your account and the blockchain",
+        "Balance, transaction history, amounts sent and received",
+        "Crypto buy / sell operations (on-ramp / off-ramp)",
+        "The private keys that custody your funds are stored encrypted in the device's secure storage (iOS Keychain / Android Keystore). They never leave the device in plain text and we do not store them on our servers in a form that would let us access your funds."
+      ]
+    },
+    "permissions": {
+      "title": "2.3. Device permissions",
+      "intro": "The app requests the following permissions. In all cases you can deny or revoke them from the operating system settings; the app will keep working though some features will become unavailable.",
+      "items": [
+        "Camera: to send photos in the in-app chat and, where applicable, scan payment QR codes.",
+        "Gallery / Storage: to attach existing images in the chat.",
+        "Contacts: we use your address book locally to detect which of your contacts already have BucksPay and make it easy to send them money. We only upload to our servers the phone numbers or emails strictly needed to do the cross-check, hashed where technically feasible. We do not sell this information nor use it for any purpose other than that feature.",
+        "Biometrics (Face ID / fingerprint): optional, to protect access to the app and authorize transactions. Biometric verification happens entirely on the device; we never receive or store your fingerprint, face or biometric template.",
+        "Push notifications: to alert you about transactions, messages and relevant events."
+      ]
+    },
+    "device": {
+      "title": "2.4. Device and usage data",
+      "items": [
+        "Device model, operating system and app version",
+        "Technical identifiers (push notification token, install identifier)",
+        "Configured language and region",
+        "IP address (for fraud detection and abuse prevention)",
+        "Technical logs: errors, performance metrics and aggregated usage events"
+      ]
+    },
+    "communications": {
+      "title": "2.5. Communications data",
+      "items": [
+        "Chat messages sent through the app (including attached images)",
+        "Any information you voluntarily send us when contacting support"
+      ]
+    }
+  },
+  "purposes": {
+    "title": "3. What we use your data for",
+    "items": [
+      "Create and operate your account and wallet",
+      "Process and record your transactions, show you your history and balances",
+      "Allow you to send and receive payments, messages and notifications to other users",
+      "Verify your identity when applicable regulation requires it (KYC/AML)",
+      "Detect and prevent fraud, money laundering, service abuse and unlawful activity",
+      "Provide support when you contact us",
+      "Improve the app: fix bugs, optimize performance and understand which features are used most",
+      "Comply with applicable legal, tax and regulatory obligations"
+    ]
+  },
+  "legalBases": {
+    "title": "4. Legal bases for processing",
+    "intro": "We process your data on the basis of:",
+    "items": [
+      "Performance of the contract you accept by using the Services.",
+      "Consent, especially for device permissions (contacts, camera, biometrics) and marketing communications where applicable. You can withdraw it at any time.",
+      "Compliance with legal obligations in financial matters, fraud prevention and AML/KYC.",
+      "Legitimate interest in keeping the platform secure and improving the service, balanced against your rights."
+    ]
+  },
+  "sharing": {
+    "title": "5. Who we share your data with",
+    "intro": "We do not sell your personal data. We share it only with:",
+    "providersTitle": "Infrastructure providers that help us operate the service, under data processing agreements:",
+    "providers": [
+      "Google Firebase (authentication, real-time database, storage, analytics, messaging). Data processed on Google's infrastructure.",
+      "Pusher (real-time messaging for chat and in-app notifications).",
+      "Google Cloud / Firebase Cloud Messaging and Apple Push Notification Service for push notifications.",
+      "On-ramp / off-ramp providers for the purchase and sale of crypto assets. When you use these features, the strictly necessary data (identity, amount, recipient) is shared with the selected provider, which acts as an independent controller under its own privacy policy."
+    ],
+    "others": [
+      "Public blockchain networks: on-chain transactions are by design public and immutable. Anyone can look up addresses, amounts and counterparties on the relevant network's explorer. We do not publish your name, email or phone on-chain, but your wallet address is permanently recorded.",
+      "Authorities when there is a court order, valid legal request or regulatory obligation that requires us to share information.",
+      "Potential acquirers in the event of a merger, acquisition or corporate restructuring, subject to confidentiality obligations and to this Policy."
+    ]
+  },
+  "transfers": {
+    "title": "6. International transfers",
+    "body": "Some of our providers (Firebase, Pusher, etc.) operate from the United States and other jurisdictions. By using the Services you accept that your data may be transferred outside your country of residence. We take reasonable measures (standard contractual clauses, certified providers) so that those transfers maintain an adequate level of protection."
+  },
+  "retention": {
+    "title": "7. Data retention",
+    "body1": "We keep your data while your account is active and for the additional time needed to comply with legal obligations (for example, accounting and AML records that may require between 5 and 10 years depending on the jurisdiction), resolve disputes or enforce our agreements. When no longer needed, we delete or anonymize them.",
+    "body2": "Transactions recorded on-chain on public blockchains cannot be deleted due to their immutable nature."
+  },
+  "security": {
+    "title": "8. Security",
+    "items": [
+      "Your private keys are stored in the device's secure enclave (Keychain on iOS, Keystore on Android).",
+      "Communications with our servers travel encrypted with HTTPS/TLS.",
+      "Passwords are stored hashed with one-way algorithms.",
+      "We apply access controls, monitoring and periodic security reviews."
+    ],
+    "footer": "No system is 100% secure. We recommend enabling biometric authentication, not sharing your credentials, and keeping your device and the app up to date."
+  },
+  "rights": {
+    "title": "9. Your rights",
+    "intro": "Depending on your jurisdiction (GDPR in the EU, CCPA in California, LGPD in Brazil, local laws in LatAm), you may have the right to:",
+    "items": [
+      "Access the personal data we hold about you",
+      "Rectify inaccurate or incomplete data",
+      "Delete your account and associated data (subject to legal retention obligations)",
+      "Object to or limit certain processing",
+      "Port your data to another provider",
+      "Withdraw previously granted consents",
+      "File a complaint with the data protection authority"
+    ],
+    "footerBefore": "To exercise any of these rights, write to us at ",
+    "footerAfter": ". We will respond within a reasonable time and in accordance with applicable law."
+  },
+  "minors": {
+    "title": "10. Minors",
+    "body": "BucksPay is not directed to persons under 18 years of age. We do not knowingly collect data from minors. If you believe a minor has provided us with data, contact us to delete it."
+  },
+  "cookies": {
+    "title": "11. Cookies and similar technologies (website)",
+    "body": "Our website may use cookies strictly necessary for its operation, plus browser local storage to remember preferences (language, theme). We do not use third-party advertising cookies. The mobile application does not use cookies, but does use local and secure device storage as described above."
+  },
+  "changes": {
+    "title": "12. Changes to this Policy",
+    "body": "We may update this Policy to reflect changes in the Services or regulation. If changes are material we will give you reasonable advance notice in the app, by email, or via a visible notice on buckspay.xyz. The \"Last updated\" date above always indicates the current version."
+  },
+  "contact": {
+    "title": "13. Contact",
+    "intro": "If you have questions about this Policy or your data:",
+    "supportLabel": "Support",
+    "webLabel": "Web"
+  }
+}
