@@ -7,7 +7,7 @@
     "goApp": "Go To App",
     "titleLead": "Accept crypto payments under",
     "titleHighlight": "your own brand",
-    "description": "BucksPay is the white-label infrastructure for your business to get paid in stablecoins across Ethereum, Polygon, Base, Arbitrum and Stellar. Non-custodial — funds settle straight to your wallet.",
+    "description": "BucksPay is the white-label infrastructure for your business to get paid in stablecoins across Ethereum, Polygon, Base, Arbitrum, Avalanche and Stellar. Non-custodial — funds settle straight to your wallet.",
     "ctaPrimary": "Get started",
     "ctaSecondary": "Request a demo",
     "trust": "Works with the chains and wallets you already use",
@@ -29,7 +29,7 @@
   },
 
   "aboutSection": {
-    "eyebrow": "Why BucksPay",
+    "eyebrow": "Why BucksPay?",
     "title": "The professional way to get paid in crypto",
     "description": "Infrastructure ready for your business to accept stablecoin payments, under your brand and without the technical hassle.",
     "learnMore": "Learn more",
@@ -56,7 +56,7 @@
     "cards": {
       "instantSettlement": {
         "title": "Instant settlement",
-        "description": "Every payment confirms on-chain and lands straight in your wallet in minutes. No bank settlement delays, no holds."
+        "description": "Every payment confirms on-chain and lands straight in your wallet in seconds. No bank settlement delays, no holds."
       },
       "lowerFees": {
         "title": "Lower fees",
@@ -70,7 +70,7 @@
     "cta": "Get started"
   },
   "howWorksSection": {
-    "eyebrow": "How it works",
+    "eyebrow": "How it works?",
     "title": "Get paid in four steps",
     "description": "From creating the link to funds landing in your wallet — without writing a single line of code.",
     "steps": {
@@ -96,6 +96,31 @@
       }
     },
     "cta": "Create my first link"
+  },
+  "gaslessSection": {
+    "badge": "Gasless",
+    "titleLead": "Zero gas,",
+    "titleHighlight": "zero friction",
+    "subtitle": "Your customers pay in stablecoins without needing the network's native token to cover gas. BucksPay abstracts it entirely: no top-ups, no failed transactions and no extra checkout steps.",
+    "statLabel": "in gas for your customer",
+    "without": {
+      "title": "Crypto without gasless",
+      "points": [
+        "The customer needs the native token (ETH, MATIC…) just to pay gas",
+        "Transactions that fail from insufficient gas",
+        "Extra steps and checkout drop-off"
+      ]
+    },
+    "with": {
+      "badge": "BucksPay",
+      "title": "With BucksPay Gasless",
+      "points": [
+        "Pays directly in stablecoins, no native token",
+        "No transactions failing for lack of gas",
+        "One-step checkout: higher conversion"
+      ]
+    },
+    "techNote": "Native gasless: EIP-3009 on EVM (Ethereum, Polygon, Base, Arbitrum, Avalanche) and a Soroban relay on Stellar."
   },
   "testimonialsSection": {
     "eyebrow": "Testimonials",
@@ -138,6 +163,29 @@
     "subtitle": "Create your account, set up your brand and share your first payment link in minutes. No code, non-custodial.",
     "ctaPrimary": "Create free account",
     "ctaSecondary": "Join the community"
+  },
+  "accountModal": {
+    "badge": "Create account",
+    "title": "Create your account",
+    "subtitle": "Leave us your details and we'll reach out to set up your account and start accepting crypto.",
+    "name": "First name",
+    "namePlaceholder": "Your name",
+    "lastName": "Last name",
+    "lastNamePlaceholder": "Your last name",
+    "email": "Email",
+    "emailPlaceholder": "you@email.com",
+    "company": "Company",
+    "companyPlaceholder": "Your business name",
+    "phone": "Phone",
+    "phonePlaceholder": "Optional",
+    "submit": "Send details",
+    "submitting": "Sending…",
+    "successTitle": "All set!",
+    "successMessage": "We received your details. We'll reach out very soon to set up your account.",
+    "done": "Got it",
+    "errorMessage": "Something went wrong while sending. Check your details and try again.",
+    "disclaimer": "By continuing you agree to be contacted about BucksPay.",
+    "close": "Close"
   },
   "contactSection": {
     "title": "Contact Us",
