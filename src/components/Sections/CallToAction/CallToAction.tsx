@@ -4,7 +4,6 @@ import React from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
 import { GradientBars } from "@/components/ui/gradient-bars-background";
 
 // Brand equalizer palette (blue ↔ teal), cycled per bar.
@@ -56,15 +55,6 @@ const CallToAction: React.FC = () => {
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            href="https://dashboard.buckspay.xyz/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#2194db] to-[#21dba9] px-8 py-4 font-semibold text-white shadow-[0_0_50px_-12px_rgba(33,219,169,0.6)] transition-transform hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#21dba9]"
-          >
-            {t("callToActionSection.ctaPrimary")}
-            <FaArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
           <Link
             href="https://t.me/buckspay"
             target="_blank"

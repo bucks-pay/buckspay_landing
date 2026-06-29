@@ -36,13 +36,13 @@ const AboutSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="mt-14 grid grid-cols-1 place-items-center gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 items-stretch justify-items-center gap-8 md:grid-cols-2 lg:grid-cols-3">
           {cards.map(({ key, icon }) => (
             <GlowCard
               key={key}
               glowColor="brand"
               customSize
-              className="h-[420px] w-full max-w-[360px]"
+              className="h-full w-full max-w-[360px]"
             >
               <div className="flex h-full flex-col p-2">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full border border-foreground/10 bg-foreground/5">

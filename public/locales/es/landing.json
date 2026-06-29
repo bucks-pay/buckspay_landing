@@ -7,7 +7,7 @@
     "goApp": "Ir a la App",
     "titleLead": "Recibe pagos en cripto con",
     "titleHighlight": "tu propia marca",
-    "description": "BucksPay es la infraestructura white-label para que tu negocio cobre en stablecoins sobre Ethereum, Polygon, Base, Arbitrum y Stellar. Sin custodia: los fondos llegan directo a tu wallet.",
+    "description": "BucksPay es la infraestructura white-label para que tu negocio cobre en stablecoins sobre Ethereum, Polygon, Base, Arbitrum, Avalanche y Stellar. Sin custodia: los fondos llegan directo a tu wallet.",
     "ctaPrimary": "Empezar gratis",
     "ctaSecondary": "Solicitar demo",
     "trust": "Compatible con las principales redes y wallets",
@@ -24,25 +24,25 @@
   },
   "showcaseSection": {
     "title": "Tu infraestructura de pagos, en piloto automático",
-    "subtitle": "Cobrá en stablecoins sobre múltiples redes, con confirmación on-chain automática y liquidación directa a tu wallet. Vos ponés la marca; nosotros, la tecnología."
+    "subtitle": "Cobra en stablecoins sobre múltiples redes, con confirmación on-chain automática y liquidación directa a tu wallet. Tú pones la marca; nosotros, la tecnología."
   },
   "aboutSection": {
-    "eyebrow": "Por qué BucksPay",
+    "eyebrow": "¿Por qué BucksPay?",
     "title": "La forma profesional de cobrar en cripto",
     "description": "Infraestructura lista para que tu negocio acepte pagos en stablecoins, con tu marca y sin complicaciones técnicas.",
     "learnMore": "Saber más",
     "cards": {
       "whiteLabel": {
-        "title": "Cobrá con tu marca",
+        "title": "Cobra con tu marca",
         "description": "Páginas de pago personalizadas con tu logo, colores y dominio. Tus clientes pagan en una experiencia 100% tuya."
       },
       "nonCustodial": {
         "title": "Sin custodia",
-        "description": "Los fondos van directo a tu wallet. BucksPay nunca toca tu dinero — vos tenés el control total."
+        "description": "Los fondos van directo a tu wallet. BucksPay nunca toca tu dinero — tú tienes el control total."
       },
       "multichain": {
         "title": "Multi-red, sin fricción",
-        "description": "Aceptá stablecoins en Ethereum, Polygon, Base, Arbitrum y Stellar, con MetaMask, WalletConnect y Coinbase."
+        "description": "Acepta stablecoins en Ethereum, Polygon, Base, Arbitrum y Stellar, con MetaMask, WalletConnect y Coinbase."
       }
     }
   },
@@ -54,33 +54,33 @@
     "cards": {
       "instantSettlement": {
         "title": "Liquidación inmediata",
-        "description": "Cada pago se confirma on-chain y llega directo a tu wallet en minutos. Sin esperas de settlement bancario ni retenciones."
+        "description": "Cada pago se confirma on-chain y llega directo a tu wallet en segundos. Sin esperas de settlement bancario ni retenciones."
       },
       "lowerFees": {
         "title": "Menos comisiones",
-        "description": "Sin intermediarios ni contracargos. Te quedás con una mayor parte de cada venta y olvidás los chargebacks."
+        "description": "Sin intermediarios ni contracargos. Te quedas con una mayor parte de cada venta y te olvidas de las disputas."
       },
       "globalReach": {
         "title": "Alcance global",
-        "description": "Cualquier cliente con una wallet puede pagarte, sin fronteras ni cuentas bancarias. Vendé al mundo desde el día uno."
+        "description": "Cualquier cliente con una wallet puede pagarte, sin fronteras ni cuentas bancarias. Vende en todo el mundo desde el primer día."
       }
     },
     "cta": "Empezar gratis"
   },
   "howWorksSection": {
-    "eyebrow": "Cómo funciona",
-    "title": "Cobrá en cuatro pasos",
+    "eyebrow": "¿Cómo funciona?",
+    "title": "Cobra en cuatro pasos",
     "description": "De crear el enlace a recibir los fondos en tu wallet, sin escribir una sola línea de código.",
     "steps": {
       "createLink": {
         "badge": "Paso 1",
-        "title": "Creá tu enlace de pago",
-        "description": "Desde el dashboard, generá un enlace con monto fijo, abierto o por rango. Reutilizable o de un solo uso."
+        "title": "Crea tu enlace de pago",
+        "description": "Desde el dashboard, genera un enlace con monto fijo, abierto o por rango. Reutilizable o de un solo uso."
       },
       "share": {
         "badge": "Paso 2",
-        "title": "Compartilo con tu cliente",
-        "description": "Enviá la URL con tu marca por donde quieras: web, WhatsApp, email o un código QR."
+        "title": "Compártelo con tu cliente",
+        "description": "Envía la URL con tu marca a donde prefieras: web, WhatsApp, correo o un código QR."
       },
       "customerPays": {
         "badge": "Paso 3",
@@ -89,11 +89,36 @@
       },
       "settle": {
         "badge": "Paso 4",
-        "title": "Recibís los fondos al instante",
-        "description": "La transacción se confirma on-chain y el dinero llega directo a tu wallet. Lo seguís en tus analíticas."
+        "title": "Recibe los fondos al instante",
+        "description": "La transacción se confirma on-chain y el dinero llega directo a tu wallet. Puedes seguirlo en tus analíticas."
       }
     },
     "cta": "Crear mi primer enlace"
+  },
+  "gaslessSection": {
+    "badge": "Gasless",
+    "titleLead": "Cero gas,",
+    "titleHighlight": "cero fricción",
+    "subtitle": "Tus clientes pagan en stablecoins sin necesitar el token nativo de la red para cubrir el gas. BucksPay lo abstrae por completo: sin recargas, sin transacciones fallidas y sin pasos extra en el checkout.",
+    "statLabel": "de gas para tu cliente",
+    "without": {
+      "title": "Cripto sin gasless",
+      "points": [
+        "El cliente necesita el token nativo (ETH, MATIC…) solo para pagar el gas",
+        "Transacciones que fallan por gas insuficiente",
+        "Pasos extra y abandono en el checkout"
+      ]
+    },
+    "with": {
+      "badge": "BucksPay",
+      "title": "Con BucksPay Gasless",
+      "points": [
+        "Paga directo en stablecoins, sin token nativo",
+        "Sin transacciones fallidas por falta de gas",
+        "Checkout de un solo paso: más conversión"
+      ]
+    },
+    "techNote": "Gasless nativo: EIP-3009 en EVM (Ethereum, Polygon, Base, Arbitrum, Avalanche) y relay de Soroban en Stellar."
   },
   "testimonialsSection": {
     "eyebrow": "Testimonios",
@@ -131,11 +156,34 @@
     }
   },
   "callToActionSection": {
-    "titleLead": "Empezá a cobrar en",
+    "titleLead": "Empieza a cobrar en",
     "titleHighlight": "cripto hoy",
-    "subtitle": "Creá tu cuenta, configurá tu marca y compartí tu primer enlace de pago en minutos. Sin código y sin custodia.",
+    "subtitle": "Crea tu cuenta, configura tu marca y comparte tu primer enlace de pago en minutos. Sin código y sin custodia.",
     "ctaPrimary": "Crear cuenta gratis",
-    "ctaSecondary": "Unite a la comunidad"
+    "ctaSecondary": "Únete a la comunidad"
+  },
+  "accountModal": {
+    "badge": "Crear cuenta",
+    "title": "Crea tu cuenta",
+    "subtitle": "Déjanos tus datos y te contactamos para configurar tu cuenta y empezar a cobrar en cripto.",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "lastName": "Apellido",
+    "lastNamePlaceholder": "Tu apellido",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "tu@correo.com",
+    "company": "Empresa",
+    "companyPlaceholder": "Nombre de tu negocio",
+    "phone": "Teléfono",
+    "phonePlaceholder": "Opcional",
+    "submit": "Enviar datos",
+    "submitting": "Enviando…",
+    "successTitle": "¡Listo!",
+    "successMessage": "Recibimos tus datos. Te contactaremos muy pronto para configurar tu cuenta.",
+    "done": "Entendido",
+    "errorMessage": "Ocurrió un problema al enviar. Revisa tus datos e inténtalo de nuevo.",
+    "disclaimer": "Al continuar aceptas que te contactemos sobre BucksPay.",
+    "close": "Cerrar"
   },
   "contactSection": {
     "title": "Contáctanos",
