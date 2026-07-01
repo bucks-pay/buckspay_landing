@@ -11,6 +11,7 @@ import LanguageSwitcher from "../Language/LanguageSwitcher";
 import ThemeToggle from "../themeSwitcher/ThemeSwitcher";
 
 const DASHBOARD_URL = "https://dashboard.buckspay.xyz/";
+const DOCS_URL = "https://buckspay.mintlify.site";
 const COMMUNITY_URL = "https://t.me/buckspay";
 const HEADER_OFFSET = 96;
 
@@ -148,6 +149,16 @@ export const Header = () => {
             })}
             <li>
               <Link
+                href={DOCS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg px-3 py-2 text-sm font-medium text-foreground/65 transition-colors hover:text-foreground"
+              >
+                {t("nav.docs")}
+              </Link>
+            </li>
+            <li>
+              <Link
                 href={COMMUNITY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -215,6 +226,17 @@ export const Header = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href={DOCS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMenuOpen(false)}
+                  className="block rounded-xl px-4 py-3 text-sm font-medium text-foreground/80 transition-colors hover:bg-foreground/5 hover:text-foreground"
+                >
+                  {t("nav.docs")}
+                </Link>
+              </li>
               <li>
                 <Link
                   href={COMMUNITY_URL}
